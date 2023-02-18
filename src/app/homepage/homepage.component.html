@@ -1,1 +1,15 @@
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim at possimus eum fugit voluptatum nisi minus nam. Velit ad quisquam fuga eveniet dolorem non atque exercitationem, minima molestiae nihil error.</p>
+
+<div class="container">
+    <div class="root" *ngFor="let i of ToursData">
+        <div class="card">
+            <img id="img" src='{{i.img}}' alt="{{i.country}}">
+            <div class="text">
+                <h4><b>{{i.country}}</b></h4>
+                <p>{{i.text}}</p>
+                <button type="button" class="btn">More about</button>
+    
+            </div>
+        </div>
+    </div>
+</div>
+
