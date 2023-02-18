@@ -1,0 +1,15 @@
+h1,p{
+    display: flex;
+    grid-template-rows: auto;
+    
+    justify-content: center;
+    font-size: 6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    margin-top: 4rem;
+}
+p{
+    color: black;
+    font-style: italic;
+    font-size: xx-large;
+}

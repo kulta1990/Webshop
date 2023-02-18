@@ -27,8 +27,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
-          },
+            "scripts": []},
           "configurations": {
             "production": {
               "budgets": [
@@ -94,5 +93,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "9e8fbae7-158f-4592-87d0-4b3f43709c64"
   }
 }

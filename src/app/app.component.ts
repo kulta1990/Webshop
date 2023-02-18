@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Projekt1';
-}
+
+  EaseInOut(): void {
+    const burger = document.getElementById('burgerMenu');
+    const nav = document.getElementById('nav');
+    burger?.addEventListener('click', () => {
+      nav?.classList.toggle('menu-active');
+    });
+  };
+ 
+};
+
