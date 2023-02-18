@@ -1,7 +1,9 @@
-
-<div class="container">
-    <div class="root" *ngFor="let i of ToursData">
-        <div class="card">
+<div id="main">
+<h1>Tour Company</h1>
+</div>
+<div class="container-cards">
+    <div id="card1" class="card1" *ngFor="let i of ToursData">
+        <div id="card">
             <img id="img" src='{{i.img}}' alt="{{i.country}}">
             <div class="text">
                 <h4><b>{{i.country}}</b></h4>

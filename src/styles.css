@@ -3,10 +3,7 @@
     margin: 0;
     scroll-behavior: smooth;
   }
-  body{
-    background: var(--color-primary);
-    z-index: -2;
-  }
+
   
   /*-------------Color----------------------*/
   :root {
@@ -18,24 +15,25 @@
   }
   /*---------------Navbar--------------------------------------*/
   header{
+    position: absolute;
     display: flex;
     color: var(--color-white);
   }
   nav {
     position:absolute;
-    height: 100%;
+    display:flex;
     background: var(--color-primary_4);
     transform: translateX(-10rem);
     transition: transform 350ms ease-in-out;
     box-shadow: 2px 2px 4px var(--color-primary_3) ;
   }
   .menu-active{
-    transform:translateX(0);
+    transform:translateX(0rem);
   }
   #burgerMenu {
     margin-top: 2rem;
     margin-left: 1.5rem;
-    z-index: +2;
+    z-index: +1;
     position: absolute;
     cursor: pointer;
   }

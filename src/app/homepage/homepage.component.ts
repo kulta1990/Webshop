@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent {
- 
+
   ToursData = [
     {
       country: "Vietnam",
@@ -39,6 +39,8 @@ export class HomepageComponent {
       text: "Explore the beautiful Switzerland"
     },
   ];
+
+
 
 };
 
