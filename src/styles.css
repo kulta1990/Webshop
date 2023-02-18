@@ -1,64 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
 * {
-    margin: 0;
-    scroll-behavior: smooth;
-  }
+  margin: 0;
+  scroll-behavior: smooth;
+}
 
-  
-  /*-------------Color----------------------*/
-  :root {
-    --color-primary: #f0ece2;
-    --color-primary_2: #dfd3c3;
-    --color-primary_3: #c7b198;
-    --color-primary_4: #596e79;
-    --color-white: #ffff;
-  }
-  /*---------------Navbar--------------------------------------*/
-  header{
-    position: absolute;
-    display: flex;
-    color: var(--color-white);
-  }
-  nav {
-    position:absolute;
-    display:flex;
-    background: var(--color-primary_4);
-    transform: translateX(-10rem);
-    transition: transform 350ms ease-in-out;
-    box-shadow: 2px 2px 4px var(--color-primary_3) ;
-  }
-  .menu-active{
-    transform:translateX(0rem);
-  }
-  #burgerMenu {
-    margin-top: 2rem;
-    margin-left: 1.5rem;
-    z-index: +1;
-    position: absolute;
-    cursor: pointer;
-  }
-  
-  nav > ul {
-    list-style-type: none;
-    margin-top: 6rem;
-    margin-left: 1rem;
-    padding-right: 2cm;
-  }
-  
-  nav > ul > li > a {
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    line-height: 4rem;
-    color: var(--color-primary_2);
-  }
-  nav > ul > li > a:hover {
-    color: var(--color-white);
-  }
-  nav > ul > li > a > i {
-    margin-right: 10px;
-    cursor: pointer;
 
-  }
-  
-  
+/*-------------Color----------------------*/
+:root {
+  --color-primary: #f0ece2;
+  --color-primary_2: #dfd3c3;
+  --color-primary_3: #c7b198;
+  --color-primary_4: #596e79;
+  --color-white: #ffff;
+}
+
+/*---------------Navbar--------------------------------------*/
+#navbarContainer {
+  height: 100%;
+  position: fixed;
+  width: 280px;
+  padding: 0;
+  z-index: +2;
+}
+
+#burgerMenu {
+  position: absolute;
+  color: var(--color-white);
+}
+
+nav {
+  position: absolute;
+  display: flex;
+  background: var(--color-primary_4);
+  transform: translateX(-12rem);
+  transition: transform 350ms ease-in-out;
+  box-shadow: 2px 2px 4px var(--color-primary_3);
+}
+
+.menu-active {
+  transform: translateX(0);
+}
+
+#burgerMenu {
+  margin-top: 2rem;
+  margin-left: 1.5rem;
+  z-index: +2;
+  position: absolute;
+  cursor: pointer;
+}
+
+nav>ul {
+  list-style-type: none;
+  margin-top: 6rem;
+  margin-left: 1rem;
+
+}
+
+nav>ul>li>a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 4rem;
+  font-size: 1vw;
+  color: var(--color-primary_2);
+}
+
+nav>ul>li>a:hover {
+  color: var(--color-white);
+}
+
+nav>ul>li>a>i {
+  margin-right: 10px;
+  cursor: pointer;
+
+}

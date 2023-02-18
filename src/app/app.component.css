@@ -2,6 +2,7 @@
 * {
     margin: 0;
     scroll-behavior: smooth;
+    
   }
   body{
     background: var(--color-primary);
@@ -17,6 +18,8 @@
     --color-white: #ffff;
   }
   /*---------------Navbar--------------------------------------*/
+  
+  
   header{
     display: flex;
     color: var(--color-white);
