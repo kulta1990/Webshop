@@ -10,7 +10,7 @@ export class AppComponent {
 
   burgerClass: string = "fa-solid fa-bars fa-xl";
   burgerArrow: string = "fa-solid fa-house";
-
+  datum:string = new Date().toString();
 
 
   EaseInOut(): void {
