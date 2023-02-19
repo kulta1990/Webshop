@@ -108,24 +108,30 @@ export class HomepageComponent {
 
   //-------------------- Close Cart Pop-up ---------------------------------//
   CloseDiv() {
-    let closeD = document.getElementById('close');
-    closeD?.addEventListener('click', () => {
-      let cardC = document.getElementById('cartContainer');
+    const el = document.getElementById('cartContainer');
+    const btn = document.getElementById('close');
 
-      cardC?.style.display === 'none';
-    });
+    if (el != null && btn != null) {
+      btn.addEventListener('click', function handleClick() {
+        if (el.style.display !== 'none') {
+          el.style.display = 'none';
+        }
+      });
+    }
+
   };
   //-------------------- Open Cart Pop-up ---------------------------------//
   ShowCartDiv() {
-    document.getElementById('btnBuy')?.addEventListener('click', () => {
-      let x:any = document.getElementById('cartContainer') as HTMLElement | null;
+    const cont = document.getElementById('cartContainer');
+    const btn = document.getElementById('btnBuy');
 
-      if (x?.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
-    })
+    if (cont != null && btn != null) {
+      btn.addEventListener('click', function handleClick() {
+        if (cont.style.display === 'none') {
+          cont.style.display = 'block';
+        }
+      });
+    }
 
   };
 
