@@ -18,27 +18,30 @@
 #navbarContainer {
   height: 100%;
   position: fixed;
-  width: 280px;
-  padding: 0;
   z-index: +2;
 }
 
 #burgerMenu {
   position: absolute;
-  color: var(--color-primary_3);
+  color: rgb(121, 55, 1);
 }
+
 
 nav {
   position: absolute;
-  display: flex;
   background: var(--color-primary_4);
-  transform: translateX(-12rem);
   transition: transform 350ms ease-in-out;
   box-shadow: 2px 2px 4px var(--color-primary_3);
+  transform: translateX(-20rem);
+  visibility: hidden;
+  
 }
 
 .menu-active {
-  transform: translateX(0);
+  display: block;
+  transform: translateX(0rem);
+  visibility: visible;
+ 
 }
 
 #burgerMenu {
@@ -51,18 +54,17 @@ nav {
 
 nav>ul {
   list-style-type: none;
-  margin-top: 6rem;
-  margin-left: 1rem;
-
+  margin-top: 1rem; padding: 50px;
 }
 
 nav>ul>li>a {
+
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
-  line-height: 4rem;
-  font-size: 1vw;
+  font-size: 1rem;
   color: var(--color-primary_2);
+  display: inline-block;
 }
 
 nav>ul>li>a:hover {
@@ -72,7 +74,6 @@ nav>ul>li>a:hover {
 nav>ul>li>a>i {
   margin-right: 10px;
   cursor: pointer;
-
 }
 
 /*--------------------footer --------------------*/
@@ -87,7 +88,6 @@ footer {
   align-items: center;
   z-index: +2;
   margin-top: 40.7rem !important;
-
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   letter-spacing: 2pt;
@@ -97,6 +97,9 @@ footer {
 
 #datum {
   font-size: 0.7rem;
+}
 
 
+@media screen {
+  
 }

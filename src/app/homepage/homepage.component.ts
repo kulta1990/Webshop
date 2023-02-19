@@ -1,3 +1,4 @@
+import { HtmlParser } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 @Component({
@@ -41,8 +42,39 @@ export class HomepageComponent {
   ];
 
   Product = [
-
+    {
+      country: "Vietnam",
+      flight: ["Swiss Airlines", "Delta", "Russian Airlines"],
+      priceProFlight: [1323, 1300, 1280],
+    },
+    {
+      country: "USA",
+      flight: ["Swiss Airlines", "Delta", "Russian Airlines"],
+      priceProFlight: [1200, 1000, 900],
+    },
+    {
+      country: "Italy",
+      flight: ["Swiss Airlines", "Delta", "Russian Airlines"],
+      priceProFlight: [250, 230, 200],
+    },
+    {
+      country: "Maldives",
+      flight: ["Swiss Airlines", "Delta", "Russian Airlines"],
+      priceProFlight: [2000, 2200, 990],
+    },
+    {
+      country: "Hungary",
+      flight: ["Swiss Airlines", "Delta", "Russian Airlines"],
+      priceProFlight: [180, 170, 130],
+    },
+    {
+      country: "Switzerland",
+      flight: ["Swiss Airlines", "Delta", "Russian Airlines"],
+      priceProFlight: [200, 220, 250],
+    },
   ];
+
+
   Rotate(): void {
     let btn = document.getElementById('btn');
     btn?.addEventListener('click', () => {
@@ -57,16 +89,51 @@ export class HomepageComponent {
       let pieceOfProduct = document.getElementById('feld') as HTMLInputElement | null;
       let pieceOfProduct_1 = Number(pieceOfProduct?.value);
 
+      const nav = document.getElementById('nav');
+      buttonEvent?.addEventListener('click', () => {
+        nav?.classList.toggle('menu-active');
+      });
+
+
+
+
       function ProductCalc(nu: number) {
         nu *= 1.27;
         return nu
       };
 
-      var resultWithTax = ProductCalc(pieceOfProduct_1);
-      console.log(resultWithTax)
-      return resultWithTax
+
     })
   };
+
+  //-------------------- Close Cart Pop-up ---------------------------------//
+  CloseDiv() {
+    let closeD = document.getElementById('close');
+    closeD?.addEventListener('click', () => {
+      let cardC = document.getElementById('cartContainer');
+
+      cardC?.style.display === 'none';
+    });
+  };
+  //-------------------- Open Cart Pop-up ---------------------------------//
+  ShowCartDiv() {
+    document.getElementById('btnBuy')?.addEventListener('click', () => {
+      let x:any = document.getElementById('cartContainer') as HTMLElement | null;
+
+      if (x?.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    })
+
+  };
+
+  //[(ngModel)]='pieceOfPruduct_1'
+  pieceOfProduct = document.getElementById('feld') as HTMLInputElement | null;
+  pieceOfProduct_1: number = Number(this.pieceOfProduct?.value);
+
+
 
 
 

@@ -1,6 +1,22 @@
+<!-- Cart -->
+<div class="container" id="cartContainer">
+    <i id="close" class="fa-sharp fa-solid fa-xmark fa-4x" (click)="CloseDiv()"></i>
+    <div id="buyDiv">
+        <i class="fa-sharp fa-solid fa-cart-arrow-down fa-3x"></i>
+        <input [(ngModel)]="pieceOfProduct_1" type="number" name="res" id="res" placeholder="0" min="0" max="50">
+        <h3>Piece of product(s): <span style="margin-left: 20px;">{{pieceOfProduct_1}}</span></h3>
+    </div>
+</div>
+
+
+
+<!-- Main H1-->
 <div id="main">
     <h1 id="h1Main">Tour Company</h1>
 </div>
+
+
+<!-- Cards -->
 <div class="container-cards">
     <div id="card1" class="card1" *ngFor="let i of ToursData">
         <div id="card">
@@ -11,6 +27,6 @@
                 <button type="button" class="btn" id="btn" (click)="Rotate()">More about</button><br>
                 <i class="fa-solid fa-cart-plus cartIcon"></i>
                 <input type="number" name="feld" id="feld" placeholder="0" min="0" max="50">
-                <button type="button" id="btnBuy" (click)="CalculatorEndAmount()">Buy</button>
+                <button type="button" id="btnBuy" >Buy</button>
             </div>
         </div>
