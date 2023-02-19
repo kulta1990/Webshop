@@ -8,9 +8,12 @@
             <div class="text">
                 <h4><b>{{i.country}}</b></h4>
                 <p>{{i.text}}</p>
-                <button type="button" class="btn">More about</button>
-            </div>
-        </div>
+                <button type="button" class="btn" id="btn"  (click)="Rotate()">More about</button><br>
+                <button type="button" id="minusBtn">-</button>
+                <i class="fa-solid fa-cart-plus cartIcon"></i>
+                <button type="button" id="plusBtn">+</button>
+                <input type="number" name="feld" id="feld" placeholder="0" min="0" max="50">
+                <button type="button" id="btnBuy">Buy</button>
     </div>
 </div>
 

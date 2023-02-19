@@ -41,7 +41,14 @@ export class HomepageComponent {
   ];
 
 
+  Rotate():void {
+    let btn = document.getElementById('btn');
+    btn?.addEventListener('click', () => {
+      btn?.classList.toggle('buttonActive')
 
+    })
+
+  }
 };
 
 

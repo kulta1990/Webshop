@@ -5,8 +5,11 @@
      --color-primary_3: #c7b198;
      --color-primary_4: #596e79;
      --color-white: #ffff;
+
+
  }
-/*----------------------- MAIN cards container --------------------------*/
+
+ /*----------------------- MAIN cards container --------------------------*/
  .container-cards {
      display: flexbox;
      max-width: 1200px;
@@ -22,60 +25,70 @@
      border-style: solid;
      border-width: 0.5pt;
  }
+
  .text>h4 {
-    font-size: 2rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    text-align: center;
-    text-transform: uppercase;
+     font-size: 2rem;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     padding-top: 1rem;
+     padding-bottom: 1rem;
+     text-align: center;
+     text-transform: uppercase;
 
-}
+ }
 
-.text {
-    width: 100%;
-    object-fit: contain;
-    justify-content: end;
-}
+ .text {
+     width: 100%;
+     object-fit: contain;
+     justify-content: end;
+ }
 
-.text>p {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-
-
-
-}
-
-#img {
-    object-fit: cover;
-    width: 100%;
-    max-height: 170px;
-}
-
-.btn {
-    margin: 20px;
-    width: 150px;
-    height: 50px;
-    border-radius: 10px;
-    border-style: none;
-    color: var(--color-white);
-    background: linear-gradient(180deg, var(--color-primary_4), var(--color-primary_3));
-    font-weight: 600;
-    font-size: 1.3rem;
-    opacity: 0.8;
-    transition: width 0.5s;
-}
-
-.btn:hover {
-    border-style: solid;
-    border-color: rgb(221, 255, 2);
-    border-width: 1.5pt;
-    border-radius: 20px;
-    width: 200px;
-}
+ .text>p {
+     font-family: Arial, Helvetica, sans-serif;
+     text-align: center;
 
 
-/*------------------------------- hover: animation -------------------------------------*/
+
+ }
+
+ #img {
+     object-fit: cover;
+     width: 100%;
+     max-height: 170px;
+ }
+
+ .btn {
+     margin: 20px;
+     width: 150px;
+     height: 50px;
+     border-radius: 10px;
+     border-style: none;
+     color: var(--color-white);
+     background: linear-gradient(180deg, var(--color-primary_4), var(--color-primary_3));
+     font-weight: 600;
+     font-size: 1.3rem;
+     opacity: 0.8;
+     transition: width 0.7s ease-in-out;
+     cursor: help;
+ }
+
+ .btn:hover {
+     width: 250px;
+     border-style: solid;
+     background: black;
+     transition: 0.7s ease-in-out;
+     border-width: 1.5pt;
+     border-radius: 20px;
+
+ }
+
+ .buttonActive {
+     transform: rotateY(360deg);
+
+
+ }
+
+
+ /*------------------------------- hover: animation -------------------------------------*/
  #card1:hover {
      animation: card1 0.3s linear;
 
@@ -114,7 +127,7 @@
      }
  }
 
-/*---------------------- Background IMG main + text ---------------------------*/
+ /*---------------------- Background IMG main + text ---------------------------*/
 
  #main {
      width: 100%;
@@ -125,13 +138,63 @@
      object-fit: cover;
  }
 
- #h1Main{
-    display: flex;
-    flex-direction: row;
-    font-size: 8vw;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15rem;
-    color: var(--color-white);
+ #h1Main {
+     display: flex;
+     flex-direction: row;
+     font-size: 8vw;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 15rem;
+     color: var(--color-white);
  }
 
+ #minusBtn {
+     background-color: red;
+     color: var(--color-primary);
+     font-weight: 800;
+     font-size: large;
+     text-align: center;
+     border-radius: 80px;
+     width: 30px;
+     border-style: none;
+     padding: 3px;
+ }
+
+ #plusBtn {
+     background-color: green;
+     color: var(--color-primary);
+     font-weight: 800;
+     font-size: large;
+     text-align: center;
+     border-radius: 80px;
+     width: 30px;
+     border-style: none;
+     padding: 3px;
+ }
+
+ #feld {
+     width: 30px;
+     height: 20px;
+     margin-left: 5px;
+
+
+ }
+
+ .cartIcon {
+     padding: 5px;
+ }
+
+ #btnBuy {
+     background-color: #42b883;
+     margin-left: 10px;
+     width: 80px;
+     height: 40px;
+     border-radius: 10px;
+     border-style: none;
+     color: var(--color-white);
+     letter-spacing: 0.4pt;
+     font-size: 1.4rem;
+     font-weight: 700;
+     font-family: Arial, Helvetica, sans-serif;
+     cursor: grab;
+ }
