@@ -40,15 +40,36 @@ export class HomepageComponent {
     },
   ];
 
+  Product = [
 
-  Rotate():void {
+  ];
+  Rotate(): void {
     let btn = document.getElementById('btn');
     btn?.addEventListener('click', () => {
       btn?.classList.toggle('buttonActive')
-
     })
+  };
 
-  }
+
+  CalculatorEndAmount() {
+    let buttonEvent = document.getElementById('btnBuy');
+    buttonEvent?.addEventListener('click', () => {
+      let pieceOfProduct = document.getElementById('feld') as HTMLInputElement | null;
+      let pieceOfProduct_1 = Number(pieceOfProduct?.value);
+
+      function ProductCalc(nu: number) {
+        nu *= 1.27;
+        return nu
+      };
+
+      var resultWithTax = ProductCalc(pieceOfProduct_1);
+      console.log(resultWithTax)
+      return resultWithTax
+    })
+  };
+
+
+
 };
 
 

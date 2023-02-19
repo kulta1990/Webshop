@@ -1,5 +1,5 @@
 <div id="main">
-<h1 id="h1Main">Tour Company</h1>
+    <h1 id="h1Main">Tour Company</h1>
 </div>
 <div class="container-cards">
     <div id="card1" class="card1" *ngFor="let i of ToursData">
@@ -8,12 +8,9 @@
             <div class="text">
                 <h4><b>{{i.country}}</b></h4>
                 <p>{{i.text}}</p>
-                <button type="button" class="btn" id="btn"  (click)="Rotate()">More about</button><br>
-                <button type="button" id="minusBtn">-</button>
+                <button type="button" class="btn" id="btn" (click)="Rotate()">More about</button><br>
                 <i class="fa-solid fa-cart-plus cartIcon"></i>
-                <button type="button" id="plusBtn">+</button>
                 <input type="number" name="feld" id="feld" placeholder="0" min="0" max="50">
-                <button type="button" id="btnBuy">Buy</button>
-    </div>
-</div>
-
+                <button type="button" id="btnBuy" (click)="CalculatorEndAmount()">Buy</button>
+            </div>
+        </div>
