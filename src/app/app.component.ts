@@ -21,7 +21,5 @@ export class AppComponent {
       burger?.classList.add('fa-solid fa-phone-volume');
     });
   };
-
-
 };
 
