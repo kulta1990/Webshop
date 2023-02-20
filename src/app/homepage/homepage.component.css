@@ -95,6 +95,7 @@
  }
 
 
+
  /*------------------------------- hover: animation -------------------------------------*/
  #card1:hover {
      animation: card1 0.3s linear;
@@ -156,22 +157,9 @@
  }
 
 
- #feld {
-     width: 30px;
-     height: 20px;
-     margin-left: 5px;
-     border-width: 2pt;
-     border-radius: 5px;
-
- }
-
- .cartIcon {
-     padding: 5px;
- }
 
  #btnBuy {
      background-color: #42b883;
-     margin-left: 10px;
      width: 80px;
      height: 40px;
      border-radius: 10px;
@@ -192,7 +180,7 @@
      border-width: 0.5pt;
      transition: color 1s ease-in-out;
  }
- 
+
  /*-------------------Cart --------------------------*/
  #cartContainer {
      width: 100%;
@@ -210,15 +198,23 @@
 
  }
 
+ #minus, #plus{
+     margin: 15px;
+ }
+ #cartIco {
+    margin-right: 60px;
+ }
+
  #buyDiv {
 
-    padding: 60px;
+     padding: 60px;
  }
- #res{
-    width: 50px;
-    height: 20px;
-    margin-left: 5px;
-    border-width: 2pt;
-    border-radius: 5px;
-    margin-left: 15px;
+
+ #res {
+     width: 50px;
+     height: 20px;
+     margin-left: 5px;
+     border-width: 2pt;
+     border-radius: 5px;
+     margin-left: 15px;
  }

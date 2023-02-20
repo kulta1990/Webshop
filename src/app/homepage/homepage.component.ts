@@ -132,17 +132,21 @@ export class HomepageComponent {
         }
       });
     }
-
   };
 
-  
+
+
   //[(ngModel)]='pieceOfPruduct_1'
-  pieceOfProduct = document.getElementById('feld') as HTMLInputElement | null;
-  pieceOfProduct_1: number = Number(this.pieceOfProduct?.value);
+  pieceOfProduct = document.getElementById('res') as HTMLInputElement | null;
+  pieceOfProduct_1 = this.pieceOfProduct?.value;
+
   
-
-
-
+vbn():void{
+  if (Number.isNaN(this.pieceOfProduct_1)) {
+   this.pieceOfProduct_1 = '';
+  }
+}; 
+  
 
 
 

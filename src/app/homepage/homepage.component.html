@@ -2,9 +2,12 @@
 <div class="container" id="cartContainer">
     <i id="close" class="fa-sharp fa-solid fa-xmark fa-4x" (click)="CloseDiv()"></i>
     <div id="buyDiv">
-        <i class="fa-sharp fa-solid fa-cart-arrow-down fa-3x"></i>
-        <input [(ngModel)]="pieceOfProduct_1" type="number" name="res" id="res" placeholder="0" min="0" max="50">
-        <h3>Piece of product(s): <span style="margin-left: 20px;">{{pieceOfProduct_1}}</span></h3>
+        <i class="fa-sharp fa-solid fa-cart-arrow-down fa-3x" id="cartIco"></i>
+        <input [(ngModel)]="pieceOfProduct_1" type="number" name="res" id="res" placeholder="1" min="1" max="20">
+        <button type="button" class="btn" id="btn" (click)="Rotate()">Confirm</button><br>
+
+        <h3>Piece of product(s): <span style="margin-left: 30px;">{{pieceOfProduct_1}}</span></h3>
+      
     </div>
 </div>
 
@@ -24,8 +27,6 @@
                 <h4><b>{{i.country}}</b></h4>
                 <p>{{i.text}}</p>
                 <button type="button" class="btn" id="btn" (click)="Rotate()">More about</button><br>
-                <i class="fa-solid fa-cart-plus cartIcon"></i>
-                <input type="number" name="feld" id="feld" placeholder="0" min="0" max="50">
-                <button type="button" id="btnBuy" (click)="ShowCartDiv()" >Buy</button>
+                <button type="button" id="btnBuy" (click)="ShowCartDiv()">Buy</button>
             </div>
         </div>
