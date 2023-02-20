@@ -139,6 +139,7 @@ export class HomepageComponent {
   pieceOfProduct = document.getElementById('feld') as HTMLInputElement | null;
   pieceOfProduct_1: number = Number(this.pieceOfProduct?.value);
 
+  
 
 
 
