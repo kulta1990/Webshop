@@ -1,5 +1,6 @@
-import { HtmlParser } from '@angular/compiler';
 import { Component } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-homepage',
@@ -12,32 +13,38 @@ export class HomepageComponent {
     {
       country: "Vietnam",
       img: "https://www.planet-wissen.de/kultur/asien/vietnam/vietnam-landschaft-100~_v-gseapremiumxl.jpg",
-      text: "Explore the beautiful nature in Vietnam"
+      text: "Explore the beautiful nature in Vietnam",
+
     },
     {
       country: "USA",
       img: "https://www.visittheusa.com/sites/default/files/styles/hero_l/public/images/hero_media_image/2017-01/Getty_515070156_EDITORIALONLY_LosAngeles_HollywoodBlvd_Web72DPI_0.jpg?h=0a8b6f8b&itok=lst_2_5d",
-      text: "Explore the beautiful LA"
+      text: "Explore the beautiful LA",
+
     },
     {
       country: "Italy",
       img: "https://cdn.travelpulse.com/images/31aaedf4-a957-df11-b491-006073e71405/bb73aab8-f2bf-4278-88c3-33dd628df23f/630x355.jpg",
-      text: "Explore the beautiful Italy"
+      text: "Explore the beautiful Italy",
+
     },
     {
       country: "Maldives",
       img: "https://www.gannett-cdn.com/media/2023/01/10/USATODAY/usatsports/The-Ritz-Carlton.jpg",
-      text: "Explore the beautiful Maldives"
+      text: "Explore the beautiful Maldives",
+
     },
     {
       country: "Hungary",
       img: "https://i.natgeofe.com/k/e965ea18-80fa-4205-a1df-3ec327ddb567/hungary-budapest.jpg",
-      text: "Explore the beautiful Hungary"
+      text: "Explore the beautiful Hungary",
+
     },
     {
       country: "Switzerland",
       img: "https://www.wanderluststorytellers.com/wp-content/uploads/2017/10/Most-Beautiful-Places-in-Switzerland-1080x720.jpg",
-      text: "Explore the beautiful Switzerland"
+      text: "Explore the beautiful Switzerland",
+
     },
   ];
 
@@ -75,78 +82,54 @@ export class HomepageComponent {
   ];
 
 
-  Rotate(): void {
-    let btn = document.getElementById('btn');
+  //-------------------- Button rotate 360deg on click ---------------------------------// 
+  Rotate() {
+    const btn = document.getElementById('btn') as HTMLElement;
     btn?.addEventListener('click', () => {
       btn?.classList.toggle('buttonActive')
     })
   };
 
 
-  CalculatorEndAmount() {
-    let buttonEvent = document.getElementById('btnBuy');
-    buttonEvent?.addEventListener('click', () => {
-      let pieceOfProduct = document.getElementById('feld') as HTMLInputElement | null;
-      let pieceOfProduct_1 = Number(pieceOfProduct?.value);
+  //-------------------- Open Cart Pop-up ---------------------------------//
+  ShowCartDiv() {
+    var cartDiv = document.getElementById('cartContainer') as HTMLElement;
+    var cartDisplay = window.getComputedStyle(cartDiv).getPropertyValue('display');
+    if (cartDisplay === 'none') {
+      cartDiv.style.display = 'block';
+    } else {
+      cartDiv.style.display = 'none';
+    }
+  }
 
-      const nav = document.getElementById('nav');
-      buttonEvent?.addEventListener('click', () => {
-        nav?.classList.toggle('menu-active');
-      });
-
-
-
-
-      function ProductCalc(nu: number) {
-        nu *= 1.27;
-        return nu
-      };
-
-
-    })
-  };
 
   //-------------------- Close Cart Pop-up ---------------------------------//
   CloseDiv() {
-    const el = document.getElementById('cartContainer');
-    const btn = document.getElementById('close');
+    var el = document.getElementById('cartContainer') as HTMLElement;
+    const btn = document.getElementById('close') as HTMLInputElement;
 
-    if (el != null && btn != null) {
-      btn.addEventListener('click', function handleClick() {
-        if (el.style.display !== 'none') {
-          el.style.display = 'none';
-        }
-      });
-    }
+
+    btn.addEventListener('click', () => {
+      if (el.style.display !== 'none') {
+        el.style.display = 'none';
+      }
+    });
 
   };
-  //-------------------- Open Cart Pop-up ---------------------------------//
-  ShowCartDiv() {
-    const cont = document.getElementById('cartContainer');
-    const btn = document.getElementById('btnBuy');
-
-    if (cont != null && btn != null) {
-      btn.addEventListener('click', function handleClick() {
-        if (cont.style.display === 'none') {
-          cont.style.display = 'block';
-        }
-      });
-    }
-  };
-
 
 
   //[(ngModel)]='pieceOfPruduct_1'
   pieceOfProduct = document.getElementById('res') as HTMLInputElement | null;
   pieceOfProduct_1 = this.pieceOfProduct?.value;
 
-  
-vbn():void{
-  if (Number.isNaN(this.pieceOfProduct_1)) {
-   this.pieceOfProduct_1 = '';
-  }
-}; 
-  
+  //-------------------- Avoid NaN ---------------------------------//
+  vbn(): void {
+    if (Number.isNaN(this.pieceOfProduct_1)) {
+      this.pieceOfProduct_1 = '';
+    }
+  };
+
+
 
 
 

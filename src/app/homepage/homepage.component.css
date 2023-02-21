@@ -1,3 +1,13 @@
+ /*---------------- Font StyleLink mainH1---------------------*/
+ @import url('https://fonts.googleapis.com/css2?family=Babylonica&display=swap');
+
+ /*---------------- Font StyleLink main > H4---------------------*/
+ @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+ /*---------------- Font StyleLink #cartContainer > p ---------------------*/
+ @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+
+
  body {
      background-image: url(/assets/Abstract-background-white-12.jpg);
      object-fit: cover;
@@ -12,6 +22,7 @@
      --color-primary_3: #c7b198;
      --color-primary_4: #596e79;
      --color-white: #ffff;
+    
 
 
  }
@@ -33,14 +44,15 @@
      border-width: 0.5pt;
  }
 
+
  .text>h4 {
      font-size: 2rem;
-     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-family: 'Shadows Into Light', cursive;
      padding-top: 1rem;
      padding-bottom: 1rem;
      text-align: center;
      text-transform: uppercase;
-
+     letter-spacing: 3pt;
  }
 
  .text {
@@ -149,11 +161,13 @@
  #h1Main {
      display: flex;
      flex-direction: row;
-     font-size: 8vw;
+     font-size: 10vw;
      margin-left: auto;
      margin-right: auto;
      margin-top: 15rem;
      color: var(--color-white);
+     font-family: 'Babylonica', cursive;
+     letter-spacing: 3pt;
  }
 
 
@@ -193,16 +207,20 @@
      color: var(--color-white);
      z-index: +5;
      padding: 10px;
-
+    
 
 
  }
 
- #minus, #plus{
-     margin: 15px;
- }
+.container-cards p {
+    font-family: 'Cinzel', serif;
+    font-size: 8pt;
+    font-weight: 700;
+}
+
+
  #cartIco {
-    margin-right: 60px;
+     margin-right: 60px;
  }
 
  #buyDiv {
@@ -218,3 +236,4 @@
      border-radius: 5px;
      margin-left: 15px;
  }
+
