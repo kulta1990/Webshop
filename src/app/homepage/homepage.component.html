@@ -1,33 +1,28 @@
 <!-- Cart -->
-<div hidden class="container" id="cartContainer">
+<!--<div class="container" id="cartContainer">
+HIDDEN-->
+<div class="container" id="cartContainer">
     <i id="close" class="fa-sharp fa-solid fa-xmark fa-4x" (click)="CloseDiv()"></i>
     <div id="buyDiv">
         <i class="fa-sharp fa-solid fa-cart-arrow-down fa-3x" id="cartIco"></i>
-        <select name="flight" id="flight">
-            <optgroup *ngFor="let x of Product">
-                <option value="">{{x.priceProFlight[0]}}</option>
-            </optgroup>
-
-
-
-
-
-
-        </select>
         <input [(ngModel)]="pieceOfProduct_1" type="number" name="res" id="res" placeholder="1" min="1" max="20">
         <button type="button" class="btn" id="btn" (click)="Rotate()">Confirm</button><br>
-        <h3>Piece of product(s): <span style="margin-left: 30px;">{{pieceOfProduct_1}} PC(s)</span></h3>
+        <h3>Person(s): <span style="margin-left: 30px;">{{pieceOfProduct_1}} PC(s)</span></h3>
         <div id="hrCart">
             <hr>
         </div>
-        <table style="color: black;">
-
-            <thead *ngFor="let x of Product">
-                <td>Flight to {{x.country}}</td>
-                <td>Price pro person with {{x.flight[0]}} {{x.priceProFlight[0]}} USD</td>
-                <td>Price pro person with {{x.flight[1]}} {{x.priceProFlight[1]}} USD</td>
-                <td>Price pro person with {{x.flight[2]}} {{x.priceProFlight[2]}} USD</td>
+        <table>
+            <thead>
+                <th colspan="4">Click on the choosen flight & price</th>
             </thead>
+            <tbody *ngFor="let x of Product">
+                <tr>
+                <td class="td_1">Flight to {{x.country}}</td>
+                <td class="tdRest">Price pro person with <span class="coFlight">{{x.flight[0]}}</span> <span class="spanPrice">{{x.priceProFlight[0]}} USD</span></td>
+                <td class="tdRest">Price pro person with <span class="coFlight">{{x.flight[1]}} </span><span class="spanPrice">{{x.priceProFlight[1]}} USD</span></td>
+                <td class="tdRest">Price pro person with <span class="coFlight">{{x.flight[2]}}</span> <span class="spanPrice">{{x.priceProFlight[2]}} USD</span></td>
+            </tr>
+            </tbody>
         </table>
 
     </div>
@@ -49,7 +44,7 @@
                 <h4><b>{{i.country}}</b></h4>
                 <p>{{i.text}}</p>
                 <button type="button" class="btn" id="btn">More about</button><br>
-                <button type="button" id="btnBuy" (click)="ShowCartDiv()">Buy</button>
+                <button type="button" id="btnBuy">Buy</button>
             </div>
         </div>
     </div>
