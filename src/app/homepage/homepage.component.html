@@ -3,11 +3,33 @@
     <i id="close" class="fa-sharp fa-solid fa-xmark fa-4x" (click)="CloseDiv()"></i>
     <div id="buyDiv">
         <i class="fa-sharp fa-solid fa-cart-arrow-down fa-3x" id="cartIco"></i>
+        <select name="flight" id="flight">
+            <optgroup *ngFor="let x of Product">
+                <option value="">{{x.priceProFlight[0]}}</option>
+            </optgroup>
+
+
+
+
+
+
+        </select>
         <input [(ngModel)]="pieceOfProduct_1" type="number" name="res" id="res" placeholder="1" min="1" max="20">
         <button type="button" class="btn" id="btn" (click)="Rotate()">Confirm</button><br>
+        <h3>Piece of product(s): <span style="margin-left: 30px;">{{pieceOfProduct_1}} PC(s)</span></h3>
+        <div id="hrCart">
+            <hr>
+        </div>
+        <table style="color: black;">
 
-        <h3>Piece of product(s): <span style="margin-left: 30px;">{{pieceOfProduct_1}}</span></h3>
-      
+            <thead *ngFor="let x of Product">
+                <td>Flight to {{x.country}}</td>
+                <td>Price pro person with {{x.flight[0]}} {{x.priceProFlight[0]}} USD</td>
+                <td>Price pro person with {{x.flight[1]}} {{x.priceProFlight[1]}} USD</td>
+                <td>Price pro person with {{x.flight[2]}} {{x.priceProFlight[2]}} USD</td>
+            </thead>
+        </table>
+
     </div>
 </div>
 
@@ -27,7 +49,7 @@
                 <h4><b>{{i.country}}</b></h4>
                 <p>{{i.text}}</p>
                 <button type="button" class="btn" id="btn">More about</button><br>
-                <button type="button" id="btnBuy" (click)="ShowCartDiv()" >Buy</button>
+                <button type="button" id="btnBuy" (click)="ShowCartDiv()">Buy</button>
             </div>
         </div>
     </div>

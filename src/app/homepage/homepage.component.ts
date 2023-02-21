@@ -56,17 +56,17 @@ export class HomepageComponent {
     },
     {
       country: "USA",
-      flight: ["Swiss Airlines", "Delta", "Russian Airlines"],
-      priceProFlight: [1200, 1000, 900],
+      flight: ["Lufthansa", "Wizzair", "British Airways"],
+      priceProFlight: [1200, 5000, 1200],
     },
     {
       country: "Italy",
-      flight: ["Swiss Airlines", "Delta", "Russian Airlines"],
+      flight: ["EasyJet", "Delta", "FinnAir"],
       priceProFlight: [250, 230, 200],
     },
     {
       country: "Maldives",
-      flight: ["Swiss Airlines", "Delta", "Russian Airlines"],
+      flight: ["Pan America", "Delta", "WizzAir"],
       priceProFlight: [2000, 2200, 990],
     },
     {
@@ -76,7 +76,7 @@ export class HomepageComponent {
     },
     {
       country: "Switzerland",
-      flight: ["Swiss Airlines", "Delta", "Russian Airlines"],
+      flight: ["Malev", "Delta", "RyanAir"],
       priceProFlight: [200, 220, 250],
     },
   ];
@@ -130,6 +130,8 @@ export class HomepageComponent {
   };
 
 
+
+ 
 
 
 
