@@ -1,6 +1,51 @@
-<div id="main">
-<h1 id="h1Main">Tour Company</h1>
+<!-- Cart -->
+<!--<div class="container" id="cartContainer">
+HIDDEN-->
+<div class="container" id="cartContainer">
+    <i id="close" class="fa-sharp fa-solid fa-xmark fa-4x" (click)="CloseDiv()"></i>
+    <div id="buyDiv">
+        <i class="fa-sharp fa-solid fa-cart-arrow-down fa-3x" id="cartIco"></i>
+        <input [(ngModel)]="pieceOfProduct_1" type="number" name="res" id="res" placeholder="1" min="1" max="20">
+        <button type="button" class="btn" id="btn" (click)="Rotate()">Confirm</button><br>
+        <h3>Person(s): <span style="margin-left: 30px;">{{pieceOfProduct_1}} PC(s)</span></h3>
+        <h3 id="h33" style="color:black"></h3>
+        <div id="hrCart">
+            <hr>
+        </div>
+        <table>
+            <thead>
+                <th colspan="4">Click on the choosen flight & price</th>
+            </thead>
+            <tbody *ngFor="let x of Product">
+                <tr>
+                    <td class="td_1">Flight to {{x.country}}</td>
+
+                    <td (click)="flight1_e()" class="tdRest">Price pro person with <span
+                            class="coFlight">{{x.flight[0]}}</span> <span id="1"
+                            class="spanPrice">{{x.priceProFlight[0]}} USD</span></td>
+
+                    <td (click)="flight2_e()" class="tdRest">Price pro person with <span
+                            class="coFlight">{{x.flight[1]}} </span><span id="2"
+                            class="spanPrice">{{x.priceProFlight[1]}} USD</span></td>
+                            
+                    <td (click)="flight3_e()" class="tdRest">Price pro person with <span
+                            class="coFlight">{{x.flight[2]}}</span> <span id="3"
+                            class="spanPrice">{{x.priceProFlight[2]}} USD</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
 </div>
+
+
+<!-- Main H1-->
+<div id="main">
+    <h1 id="h1Main">Tour Company</h1>
+</div>
+
+
+<!-- Cards -->
 <div class="container-cards">
     <div id="card1" class="card1" *ngFor="let i of ToursData">
         <div id="card">
@@ -8,12 +53,9 @@
             <div class="text">
                 <h4><b>{{i.country}}</b></h4>
                 <p>{{i.text}}</p>
-                <button type="button" class="btn" id="btn"  (click)="Rotate()">More about</button><br>
-                <button type="button" id="minusBtn">-</button>
-                <i class="fa-solid fa-cart-plus cartIcon"></i>
-                <button type="button" id="plusBtn">+</button>
-                <input type="number" name="feld" id="feld" placeholder="0" min="0" max="50">
+                <button type="button" class="btn" id="btn">More about</button><br>
                 <button type="button" id="btnBuy">Buy</button>
+            </div>
+        </div>
     </div>
 </div>
-

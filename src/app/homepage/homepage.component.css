@@ -1,3 +1,20 @@
+ /*---------------- Font StyleLink mainH1---------------------*/
+ @import url('https://fonts.googleapis.com/css2?family=Babylonica&display=swap');
+
+ /*---------------- Font StyleLink main > H4---------------------*/
+ @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+ /*---------------- Font StyleLink #cartContainer > p ---------------------*/
+ @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+
+
+ body {
+     background-image: url(/assets/Abstract-background-white-12.jpg);
+     object-fit: cover;
+     width: 100%;
+     height: 100%;
+ }
+
  /*-------------Color----------------------*/
  :root {
      --color-primary: #f0ece2;
@@ -5,6 +22,7 @@
      --color-primary_3: #c7b198;
      --color-primary_4: #596e79;
      --color-white: #ffff;
+
 
 
  }
@@ -26,14 +44,15 @@
      border-width: 0.5pt;
  }
 
+
  .text>h4 {
      font-size: 2rem;
-     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-family: 'Shadows Into Light', cursive;
      padding-top: 1rem;
      padding-bottom: 1rem;
      text-align: center;
      text-transform: uppercase;
-
+     letter-spacing: 3pt;
  }
 
  .text {
@@ -86,6 +105,7 @@
 
 
  }
+
 
 
  /*------------------------------- hover: animation -------------------------------------*/
@@ -141,52 +161,19 @@
  #h1Main {
      display: flex;
      flex-direction: row;
-     font-size: 8vw;
+     font-size: 10vw;
      margin-left: auto;
      margin-right: auto;
      margin-top: 15rem;
      color: var(--color-white);
+     font-family: 'Babylonica', cursive;
+     letter-spacing: 3pt;
  }
 
- #minusBtn {
-     background-color: red;
-     color: var(--color-primary);
-     font-weight: 800;
-     font-size: large;
-     text-align: center;
-     border-radius: 80px;
-     width: 30px;
-     border-style: none;
-     padding: 3px;
- }
 
- #plusBtn {
-     background-color: green;
-     color: var(--color-primary);
-     font-weight: 800;
-     font-size: large;
-     text-align: center;
-     border-radius: 80px;
-     width: 30px;
-     border-style: none;
-     padding: 3px;
- }
-
- #feld {
-     width: 30px;
-     height: 20px;
-     margin-left: 5px;
-
-
- }
-
- .cartIcon {
-     padding: 5px;
- }
 
  #btnBuy {
      background-color: #42b883;
-     margin-left: 10px;
      width: 80px;
      height: 40px;
      border-radius: 10px;
@@ -197,4 +184,112 @@
      font-weight: 700;
      font-family: Arial, Helvetica, sans-serif;
      cursor: grab;
+
+ }
+
+ #btnBuy:hover {
+     background-color: var(--color-white);
+     color: rgb(11, 239, 87);
+     border-style: solid;
+     border-width: 0.5pt;
+     transition: color 1s ease-in-out;
+ }
+
+ /*-------------------Cart --------------------------*/
+ #cartContainer {
+     width: 100%;
+     height: 80%;
+     margin-top: 5%;
+     margin-left: auto;
+     margin-right: auto;
+     background-color: rgb(181, 175, 175);
+     position: fixed;
+     color: var(--color-white);
+     z-index: +5;
+     padding: 10px;
+     overflow-y: scroll;
+
+
+ }
+
+ .container-cards p {
+     font-family: 'Cinzel', serif;
+     font-size: 8pt;
+     font-weight: 700;
+ }
+
+
+ #cartIco {
+     margin-right: 60px;
+ }
+
+ #buyDiv {
+
+     padding: 60px;
+ }
+
+ #hrCart {
+     margin-top: 20px;
+ }
+
+ #res {
+     width: 50px;
+     height: 20px;
+     margin-left: 5px;
+     border-width: 2pt;
+     border-radius: 5px;
+     margin-left: 15px;
+ }
+
+ table {
+     color: var(--color-white);
+     margin-top: 10px;
+     padding: 5px;
+     font-family: 'Cinzel', serif;
+ }
+
+ .td_1 {
+     color: #000000;
+     padding: 5px;
+     text-align: center;
+     font-weight: 600;
+
+ }
+
+ .tdRest {
+     border-style: solid;
+     border-width: 1pt;
+     border-radius: 5px;
+     padding: 4px;
+ }
+
+ .tdRest:hover {
+     background-color: var(--color-primary_4);
+     cursor: pointer;
+     color: var(--color-white);
+ }
+
+ .tdRest:hover .spanPrice {
+     cursor: pointer;
+     color: var(--color-white);
+ }
+
+ .tdRest:hover .coFlight {
+     cursor: pointer;
+     color: var(--color-white);
+ }
+
+ th {
+     font-size: 1.5rem;
+     color: var(--color-primary_4);
+ }
+
+ .spanPrice {
+     color: #b75656;
+     font-weight: 800;
+ }
+
+ .coFlight {
+     color: rgb(0, 0, 0);
+     margin-right: 8px;
  }

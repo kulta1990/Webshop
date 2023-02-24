@@ -8,8 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Projekt1';
 
-  burgerClass: string = "fa-solid fa-bars fa-xl";
-  burgerArrow: string = "fa-solid fa-house";
+ 
   datum:string = new Date().toString();
 
 
@@ -18,11 +17,9 @@ export class AppComponent {
     const nav = document.getElementById('nav');
     burger?.addEventListener('click', () => {
       nav?.classList.toggle('menu-active');
-      burger.classList.toggle(this.burgerClass);
-      burger.classList.toggle(this.burgerArrow);
+      burger?.classList.remove('fa-solid fa-bars fa-xl');
+      burger?.classList.add('fa-solid fa-phone-volume');
     });
   };
-
-
 };
 
