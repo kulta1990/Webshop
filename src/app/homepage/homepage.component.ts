@@ -92,16 +92,16 @@ export class HomepageComponent {
 
 
   //-------------------- Open Cart Pop-up ---------------------------------//
- /* ShowCartDiv() {
-    var cartDiv = document.getElementById('cartContainer') as HTMLElement;
-    var cartDisplay = window.getComputedStyle(cartDiv).getPropertyValue('display');
-    if (cartDisplay === 'none') {
-      cartDiv.style.display = 'block';
-    } else {
-      cartDiv.style.display = 'none';
-    }
-  }
-*/
+  /* ShowCartDiv() {
+     var cartDiv = document.getElementById('cartContainer') as HTMLElement;
+     var cartDisplay = window.getComputedStyle(cartDiv).getPropertyValue('display');
+     if (cartDisplay === 'none') {
+       cartDiv.style.display = 'block';
+     } else {
+       cartDiv.style.display = 'none';
+     }
+   }
+ */
 
   //-------------------- Close Cart Pop-up ---------------------------------//
   CloseDiv() {
@@ -128,12 +128,52 @@ export class HomepageComponent {
       this.pieceOfProduct_1 = '';
     }
   };
+  //-----------------PROBA------------------------//
+
+  calcNet(array: any[]) {
+    for (let i: number = 0; i < array.length; i++) {
+      for (let j: number = 0; j < array[i].priceProFlight.length; j++) {
+        let az: any = array[i][j];
+
+        let td1 = document.getElementById('1');
+        td1?.addEventListener('click', () => {
+          let h3 = document.getElementById('calcNet') as HTMLElement;
+          h3.innerHTML = az;
+
+        });
+
+      }
+    }
+  }
+  calcnet_2 = this.calcNet(this.Product);
+
+  //ticketprice tömb 
+  tumb = this.calcNet(this.Product);
+
+  flight1 = document.getElementById('1') as HTMLElement;
+  flight2 = document.getElementById('2') as HTMLElement;
+  flight3 = document.getElementById('3') as HTMLElement;
+  price = document.getElementById('h33') as HTMLElement;
+
+  flight1_e() {
+    this.flight1.addEventListener('click', () => {
+      this.price.innerHTML = this.Product[0].priceProFlight.join(' ');
+    });
+  }
+  flight2_e() {
+    this.flight2.addEventListener('click', () => {
+      this.price.innerHTML = this.Product[1].priceProFlight.join(' ');
+    });
+  }
+  flight3_e() {
+    this.flight3.addEventListener('click', () => {
+      this.price.innerHTML = this.Product[2].priceProFlight.join(' ');
+    });
+
+  }
 
 
-
- 
-
-
+  
 
 };
 

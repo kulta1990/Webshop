@@ -8,6 +8,7 @@ HIDDEN-->
         <input [(ngModel)]="pieceOfProduct_1" type="number" name="res" id="res" placeholder="1" min="1" max="20">
         <button type="button" class="btn" id="btn" (click)="Rotate()">Confirm</button><br>
         <h3>Person(s): <span style="margin-left: 30px;">{{pieceOfProduct_1}} PC(s)</span></h3>
+        <h3 id="h33" style="color:black"></h3>
         <div id="hrCart">
             <hr>
         </div>
@@ -17,11 +18,20 @@ HIDDEN-->
             </thead>
             <tbody *ngFor="let x of Product">
                 <tr>
-                <td class="td_1">Flight to {{x.country}}</td>
-                <td class="tdRest">Price pro person with <span class="coFlight">{{x.flight[0]}}</span> <span class="spanPrice">{{x.priceProFlight[0]}} USD</span></td>
-                <td class="tdRest">Price pro person with <span class="coFlight">{{x.flight[1]}} </span><span class="spanPrice">{{x.priceProFlight[1]}} USD</span></td>
-                <td class="tdRest">Price pro person with <span class="coFlight">{{x.flight[2]}}</span> <span class="spanPrice">{{x.priceProFlight[2]}} USD</span></td>
-            </tr>
+                    <td class="td_1">Flight to {{x.country}}</td>
+
+                    <td (click)="flight1_e()" class="tdRest">Price pro person with <span
+                            class="coFlight">{{x.flight[0]}}</span> <span id="1"
+                            class="spanPrice">{{x.priceProFlight[0]}} USD</span></td>
+
+                    <td (click)="flight2_e()" class="tdRest">Price pro person with <span
+                            class="coFlight">{{x.flight[1]}} </span><span id="2"
+                            class="spanPrice">{{x.priceProFlight[1]}} USD</span></td>
+                            
+                    <td (click)="flight3_e()" class="tdRest">Price pro person with <span
+                            class="coFlight">{{x.flight[2]}}</span> <span id="3"
+                            class="spanPrice">{{x.priceProFlight[2]}} USD</span></td>
+                </tr>
             </tbody>
         </table>
 
