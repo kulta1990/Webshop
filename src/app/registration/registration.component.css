@@ -1,0 +1,27 @@
+li {
+    list-style-image: url('../../assets/listStyleType.jpg');
+    margin: 30px;
+}
+span {
+    top:-20px; position:relative; 
+ }
+
+ul {
+    margin-top: 40px;
+}
+
+.holder {
+    max-width: 400px;
+    margin: auto;
+    padding: 30px;
+}
+
+.form {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+hr {
+    width: 50%;
+
+}
