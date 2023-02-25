@@ -41,7 +41,10 @@
      display: inline-block;
      margin: 20px;
      border-style: solid;
-     border-width: 0.5pt;
+     border-width: 0.8pt;
+     outline: var(--color-primary_3) inset 4px;
+     box-shadow: 10px 10px 8px var(--color-primary_4);
+     
  }
 
 
