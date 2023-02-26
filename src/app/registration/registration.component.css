@@ -1,24 +1,82 @@
+* {
+    font-family: sans-serif;
+
+}
+
+input {
+    margin: 5px;
+    width: 250px;
+    height: 25px;
+    border-radius: 5px;
+    border-color: rgb(238, 169, 65);
+    background-color: rgb(242, 233, 233);
+
+
+}
+
+input:focus {
+    width: 260px;
+    height: 30px;
+}
+
+input::placeholder {
+    color: rgb(159, 109, 63);
+}
+i{
+    margin: 5px;
+}
 li {
     list-style-image: url('../../assets/listStyleType.jpg');
     margin: 30px;
+
 }
+#btnReg, #btnSign{
+    width: 150px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: rgb(38, 38, 227);
+    height: 35px;
+    color: white;
+    border-style: none;
+    font-size: 1.2rem;
+    
+}
+#btnReg:hover , #btnSign:hover{
+    opacity: 0.8;
+    background-color: rgb(63, 61, 61);
+    width: 165px;
+}
+
+li::first-letter {
+    color: rgba(185, 71, 15, 0.893);
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1.2pt;
+}
+
 span {
-    top:-20px; position:relative; 
- }
+    top: -20px;
+    position: relative;
+
+}
 
 ul {
     margin-top: 40px;
+
 }
 
 .holder {
     max-width: 400px;
     margin: auto;
     padding: 30px;
+    height: fit-content;
+    background-color: bisque;
 }
 
 .form {
     margin-top: 3rem;
-    margin-bottom: 2rem;
+    padding-left: 60px;
 }
 
 hr {
