@@ -1,15 +1,17 @@
 * {
     font-family: sans-serif;
+}
+.container-fluid{
+    background-image: linear-gradient(to right, rgb(242, 232, 232), rgb(192, 174, 174), grey, rgb(227, 99, 99));
 
 }
-
 input {
     margin: 5px;
     width: 250px;
     height: 25px;
     border-radius: 5px;
     border-color: rgb(238, 169, 65);
-    background-color: rgb(242, 233, 233);
+
 
 
 }
@@ -17,6 +19,8 @@ input {
 input:focus {
     width: 260px;
     height: 30px;
+    background-color: rgb(198, 196, 192);
+    
 }
 
 input::placeholder {
@@ -31,10 +35,10 @@ li {
 
 }
 #btnReg, #btnSign{
-    width: 150px;
+    width: 130px;
     margin: 10px;
     border-radius: 15px;
-    background-color: rgb(38, 38, 227);
+    background-color: rgba(34, 34, 204, 0.779);
     height: 35px;
     color: white;
     border-style: none;
@@ -44,7 +48,8 @@ li {
 #btnReg:hover , #btnSign:hover{
     opacity: 0.8;
     background-color: rgb(63, 61, 61);
-    width: 165px;
+    width: 150px;
+    transition: width 0.4s ease-in-out;
 }
 
 li::first-letter {
@@ -70,8 +75,10 @@ ul {
     max-width: 400px;
     margin: auto;
     padding: 30px;
-    height: fit-content;
+    height: 700px;
     background-color: bisque;
+    box-shadow: 10px 0px 20px burlywood, -10px 0px 20px burlywood;
+    
 }
 
 .form {
