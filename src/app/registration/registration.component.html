@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div class="holder">
+       
+        <form class="form" action="#" method="post">
+            <h1>Registration</h1>
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="Fname" required id="Fname" minlength="1" placeholder="First Name:"><br>
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="Lname" required id="Lname" minlength="1" placeholder="Family Name:"><br>
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" name="email" required id="email" placeholder="E-mail:"><br><br>
+            <i class="fa-solid fa-key"></i>
+            <input type="password" required name="password" id="password" placeholder="Password:"><br>
+            <i class="fa-solid fa-key"></i>
+            <input type="password" name="password_again" id="password_again" placeholder="Password again:"><br><br>
+            <button type="submit" id="btnReg" (click)="Regexp()">Registration</button>
+            <button type="submit" id='btnSign'>Sign In</button>
+        </form>
+        <span class="hr"><hr></span>
+        <h3>Please carefully fill out this form contains the following:</h3>
+        <ul>
+            <li>
+                <span>Felds fill required!</span>
+            </li>
+            <li>
+                <span> E-mail in correct format!</span>
+            </li>
+            <li>
+                <span>Passwords must be the same, and min. 5 char and 2 number and one mark!</span>
+            </li>
+        </ul>
+    </div>
+
+</div>
