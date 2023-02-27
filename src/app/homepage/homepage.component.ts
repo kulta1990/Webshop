@@ -92,7 +92,7 @@ export class HomepageComponent {
 
 
   //-------------------- Open Cart Pop-up ---------------------------------//
-  /* ShowCartDiv() {
+   ShowCartDiv() {
      var cartDiv = document.getElementById('cartContainer') as HTMLElement;
      var cartDisplay = window.getComputedStyle(cartDiv).getPropertyValue('display');
      if (cartDisplay === 'none') {
@@ -101,7 +101,7 @@ export class HomepageComponent {
        cartDiv.style.display = 'none';
      }
    }
- */
+ 
 
   //-------------------- Close Cart Pop-up ---------------------------------//
   CloseDiv() {

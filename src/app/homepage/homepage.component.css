@@ -24,7 +24,7 @@
 
  /*----------------------- MAIN cards container --------------------------*/
  .container-cards {
-     display:flexbox;
+     display: flexbox;
      max-width: 1200px;
      padding-top: 30px;
      margin: 0px auto;
@@ -40,7 +40,7 @@
      border-width: 0.8pt;
      outline: var(--color-primary_3) inset 4px;
      box-shadow: 10px 10px 8px var(--color-primary_4);
-     
+
  }
 
 
@@ -209,7 +209,7 @@
      z-index: +5;
      padding: 10px;
      overflow-y: scroll;
-
+     display: none;
 
  }
 
