@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class RegistrationComponent {
 
-  Regexp():void {
+  Regexp() {
+    
     const event = document.getElementById('btnReg');
     event?.addEventListener('click', () => {
       let a: any = document.getElementById('email') as HTMLElement | null;

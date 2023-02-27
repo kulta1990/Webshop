@@ -1,6 +1,8 @@
 <div class="container-fluid">
     <div class="holder">
-        <form class="form" action="registration.php" method="post">
+       
+        <form class="form" action="#" method="post">
+            <h1>Registration</h1>
             <i class="fa-solid fa-user"></i>
             <input type="text" name="Fname" required id="Fname" minlength="1" placeholder="First Name:"><br>
             <i class="fa-solid fa-user"></i>
@@ -11,10 +13,10 @@
             <input type="password" required name="password" id="password" placeholder="Password:"><br>
             <i class="fa-solid fa-key"></i>
             <input type="password" name="password_again" id="password_again" placeholder="Password again:"><br><br>
-            <button type="submit" id="btnReg">Registration</button>
+            <button type="submit" id="btnReg" (click)="Regexp()">Registration</button>
             <button type="submit" id='btnSign'>Sign In</button>
         </form>
-        <hr>
+        <span class="hr"><hr></span>
         <h3>Please carefully fill out this form contains the following:</h3>
         <ul>
             <li>
@@ -30,4 +32,3 @@
     </div>
 
 </div>
-

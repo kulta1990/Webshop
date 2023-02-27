@@ -1,10 +1,21 @@
 * {
     font-family: sans-serif;
 }
-.container-fluid{
+
+.container-fluid {
     background-image: linear-gradient(to right, rgb(242, 232, 232), rgb(192, 174, 174), grey, rgb(227, 99, 99));
 
 }
+
+h1 {
+    text-align: center;
+    letter-spacing: 1pt;
+    font-family: cursive;
+    color: rgb(122, 126, 130);
+    margin-bottom: 30px;
+    text-shadow: 0.5px 0.5px  rgb(90, 89, 89);
+}
+
 input {
     margin: 5px;
     width: 250px;
@@ -12,43 +23,58 @@ input {
     border-radius: 5px;
     border-color: rgb(238, 169, 65);
 
-
-
 }
 
 input:focus {
     width: 260px;
     height: 30px;
     background-color: rgb(198, 196, 192);
-    
+    font-weight: 700;
 }
 
 input::placeholder {
     color: rgb(159, 109, 63);
 }
-i{
+
+i {
     margin: 5px;
 }
-li {
-    list-style-image: url('../../assets/listStyleType.jpg');
-    margin: 30px;
 
+li {
+    list-style-image: url('../../assets/check.png');
+    color: rgb(122, 126, 130);
+    margin: 30px;
+font-size: 0.8rem;
 }
-#btnReg, #btnSign{
+
+.hr {
+    margin: 30px;
+}
+hr{
+    border: 0.2px solid black;
+    border-bottom: none;
+}
+
+#btnReg,
+#btnSign {
     width: 130px;
-    margin: 10px;
+    margin: 15px;
     border-radius: 15px;
-    background-color: rgba(34, 34, 204, 0.779);
+    background-color: rgba(113, 113, 118, 0.779);
     height: 35px;
     color: white;
     border-style: none;
     font-size: 1.2rem;
-    
+
 }
-#btnReg:hover , #btnSign:hover{
+
+#btnReg:hover,
+#btnSign:hover {
     opacity: 0.8;
-    background-color: rgb(63, 61, 61);
-    width: 150px;
+    background-color: rgb(248, 243, 243);
+    color: blue;
+    width: 140px;
+    border-style: solid;
     transition: width 0.4s ease-in-out;
 }
 
@@ -58,6 +84,7 @@ li::first-letter {
     font-weight: 700;
     font-family: 'Times New Roman', Times, serif;
     letter-spacing: 1.2pt;
+    margin-left: 4px;
 }
 
 span {
@@ -73,20 +100,26 @@ ul {
 
 .holder {
     max-width: 400px;
-    margin: auto;
-    padding: 30px;
+    margin: 0px auto;
+    padding: 40px;
     height: 700px;
     background-color: bisque;
     box-shadow: 10px 0px 20px burlywood, -10px 0px 20px burlywood;
-    
+
 }
 
 .form {
     margin-top: 3rem;
-    padding-left: 60px;
+    margin: 0px auto;
+    text-align: center;
+
 }
 
 hr {
-    width: 50%;
+    width: 100%;
 
+}
+h3{
+    color: rgb(211, 134, 32);
+    text-shadow: 0.5px 0.5px  rgb(90, 89, 89);
 }
