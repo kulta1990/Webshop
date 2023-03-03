@@ -19,17 +19,17 @@ HIDDEN-->
             <tbody *ngFor="let x of Product">
                 <tr>
                     <td class="td_1">Flight to {{x.country}}</td>
-
+                            //adatelem elérése: elem.dataset.flightId
                     <td (click)="flight1_e()" class="tdRest">Price pro person with <span
-                            class="coFlight">{{x.flight[0]}}</span> <span id="1"
+                            class="coFlight">{{x.flight[0]}}</span> <span data-flight-id="0"
                             class="spanPrice">{{x.priceProFlight[0]}} USD</span></td>
 
                     <td (click)="flight2_e()" class="tdRest">Price pro person with <span
-                            class="coFlight">{{x.flight[1]}} </span><span id="2"
+                            class="coFlight">{{x.flight[1]}} </span><span id="1"
                             class="spanPrice">{{x.priceProFlight[1]}} USD</span></td>
                             
-                    <td (click)="flight3_e()" class="tdRest">Price pro person with <span
-                            class="coFlight">{{x.flight[2]}}</span> <span id="3"
+                    <td (click)="flight3_e()" class="tdRest" >Price pro person with <span
+                            class="coFlight">{{x.flight[2]}}</span> <span id="2"
                             class="spanPrice">{{x.priceProFlight[2]}} USD</span></td>
                 </tr>
             </tbody>

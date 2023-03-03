@@ -156,9 +156,10 @@ export class HomepageComponent {
   price = document.getElementById('h33') as HTMLElement;
 
   flight1_e() {
-    this.flight1.addEventListener('click', () => {
+    /*this.flight1.addEventListener('click', () => {
       this.price.innerHTML = this.Product[0].priceProFlight.join(' ');
-    });
+    });*/
+    console.log('helo')
   }
   flight2_e() {
     this.flight2.addEventListener('click', () => {
