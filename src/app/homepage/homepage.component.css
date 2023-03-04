@@ -22,7 +22,8 @@
 
  }
 
- /*----------------------- MAIN cards container --------------------------*/
+ /*-----------------------  MAIN cards  container --------------------------*/
+ 
  .container-cards {
      display: flexbox;
      max-width: 1200px;
