@@ -92,7 +92,7 @@ export class HomepageComponent {
 
 
   //-------------------- Open Cart Pop-up ---------------------------------//
-  /* ShowCartDiv() {
+   ShowCartDiv() {
      var cartDiv = document.getElementById('cartContainer') as HTMLElement;
      var cartDisplay = window.getComputedStyle(cartDiv).getPropertyValue('display');
      if (cartDisplay === 'none') {
@@ -101,7 +101,7 @@ export class HomepageComponent {
        cartDiv.style.display = 'none';
      }
    }
- */
+ 
 
   //-------------------- Close Cart Pop-up ---------------------------------//
   CloseDiv() {
@@ -156,9 +156,10 @@ export class HomepageComponent {
   price = document.getElementById('h33') as HTMLElement;
 
   flight1_e() {
-    this.flight1.addEventListener('click', () => {
+    /*this.flight1.addEventListener('click', () => {
       this.price.innerHTML = this.Product[0].priceProFlight.join(' ');
-    });
+    });*/
+    console.log('helo')
   }
   flight2_e() {
     this.flight2.addEventListener('click', () => {
