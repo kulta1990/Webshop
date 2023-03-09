@@ -42,7 +42,7 @@ export class HomepageComponent {
     },
     {
       country: "Switzerland",
-      img: "https://www.wanderluststorytellers.com/wp-content/uploads/2017/10/Most-Beautiful-Places-in-Switzerland-1080x720.jpg",
+      img: "https://cdn.bunniktours.com.au/public/gallery_images/Europe/Alpine%20Discovery/EU%20-%20Switzerland%20-%20Zurich%20by%20Mirza%20Ariadi-feature.jpg",
       text: "Explore the beautiful Switzerland",
 
     },
@@ -92,16 +92,16 @@ export class HomepageComponent {
 
 
   //-------------------- Open Cart Pop-up ---------------------------------//
-   ShowCartDiv() {
-     var cartDiv = document.getElementById('cartContainer') as HTMLElement;
-     var cartDisplay = window.getComputedStyle(cartDiv).getPropertyValue('display');
-     if (cartDisplay === 'none') {
-       cartDiv.style.display = 'block';
-     } else {
-       cartDiv.style.display = 'none';
-     }
-   }
- 
+  ShowCartDiv() {
+    var cartDiv = document.getElementById('cartContainer') as HTMLElement;
+    var cartDisplay = window.getComputedStyle(cartDiv).getPropertyValue('display');
+    if (cartDisplay === 'none') {
+      cartDiv.style.display = 'block';
+    } else {
+      cartDiv.style.display = 'none';
+    }
+  }
+
 
   //-------------------- Close Cart Pop-up ---------------------------------//
   CloseDiv() {
@@ -128,54 +128,71 @@ export class HomepageComponent {
       this.pieceOfProduct_1 = '';
     }
   };
-  //-----------------PROBA------------------------//
 
-  calcNet(array: any[]) {
-    for (let i: number = 0; i < array.length; i++) {
-      for (let j: number = 0; j < array[i].priceProFlight.length; j++) {
-        let az: any = array[i][j];
 
-        let td1 = document.getElementById('1');
-        td1?.addEventListener('click', () => {
-          let h3 = document.getElementById('calcNet') as HTMLElement;
-          h3.innerHTML = az;
+  //---------------------- onClick get td price give back for calc ---------------//
 
-        });
 
-      }
-    }
-  }
-  calcnet_2 = this.calcNet(this.Product);
-
-  //ticketprice tömb 
-  tumb = this.calcNet(this.Product);
-
-  flight1 = document.getElementById('1') as HTMLElement;
-  flight2 = document.getElementById('2') as HTMLElement;
-  flight3 = document.getElementById('3') as HTMLElement;
-  price = document.getElementById('h33') as HTMLElement;
 
   flight1_e() {
-    /*this.flight1.addEventListener('click', () => {
-      this.price.innerHTML = this.Product[0].priceProFlight.join(' ');
-    });*/
-    console.log('helo')
-  }
+    let price = document.getElementById('h33') as HTMLElement;
+    let flight1 = document.getElementById('0') as HTMLElement;
+    let flight11: string = flight1.innerHTML;
+    flight1.addEventListener('click', () => {
+      for (let i = 0; i < this.Product.length; i++) {
+        if (String(this.Product[i].priceProFlight[0]) == flight11) {
+          price.innerHTML = `${flight11} pro person`;
+        } else if (String(this.Product[i].priceProFlight[1]) == flight11) {
+          price.innerHTML = `${flight11} pro person`;
+        } else if (String(this.Product[i].priceProFlight[2]) == flight11) {
+          price.innerHTML = `${flight11} pro person`;
+        }
+      }
+    })
+  };
+
+
   flight2_e() {
-    this.flight2.addEventListener('click', () => {
-      this.price.innerHTML = this.Product[1].priceProFlight.join(' ');
-    });
-  }
+    let price = document.getElementById('h33') as HTMLElement;
+    let flight2 = document.getElementById('1') as HTMLElement;
+    let flight22: string = flight2.innerHTML;
+    flight2.addEventListener('click', () => {
+      for (let i = 0; i < this.Product.length; i++) {
+        if (String(this.Product[i].priceProFlight[0]) == flight22) {
+          price.innerHTML = `${flight22} pro person`;
+        } else if (String(this.Product[i].priceProFlight[1]) == flight22) {
+          price.innerHTML = `${flight22} pro person`;
+        } else if (String(this.Product[i].priceProFlight[2]) == flight22) {
+          price.innerHTML = `${flight22} pro person`;
+        }
+      }
+    })
+  };
+
   flight3_e() {
-    this.flight3.addEventListener('click', () => {
-      this.price.innerHTML = this.Product[2].priceProFlight.join(' ');
-    });
+    let price = document.getElementById('h33') as HTMLElement;
+    let flight3 = document.getElementById('2') as HTMLElement;
+    let flight33: string = flight3.innerHTML;
+    flight3.addEventListener('click', () => {
+      for (let i = 0; i < this.Product.length; i++) {
+        if (String(this.Product[i].priceProFlight[0]) == flight33) {
+          price.innerHTML = `${flight33} pro person`;
+        } else if (String(this.Product[i].priceProFlight[1]) == flight33) {
+          price.innerHTML = `${flight33} pro person`;
+        } else if (String(this.Product[i].priceProFlight[2]) == flight33) {
+          price.innerHTML = `${flight33} pro person`;
+        }
+      }
+    })
+  };
 
+  /*------------------------------- calc ---------------------------------------*/
+  Calc() {
+    let price = document.getElementById('h33') as HTMLElement;
+    let pr: string = price.innerHTML;
+    let priceSumPerson = Number(pr) * Number(this.pieceOfProduct);
+    let ar = price.innerHTML = priceSumPerson.toString();
+    return ar
   }
 
-
-  
-
-};
-
-
+}
