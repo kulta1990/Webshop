@@ -9,7 +9,7 @@ HIDDEN-->
         <button type="button" class="btn" id="btn" (click)="Rotate()">Confirm</button><br>
         <h3>Person(s): <span style="margin-left: 30px;">{{pieceOfProduct_1}} PC(s)</span></h3>
         <h3 id="h33" style="color:black"></h3>
-        <h3>{{Calc()}}</h3>
+        <h3></h3>
         <div id="hrCart">
             <hr>
         </div>
@@ -21,15 +21,15 @@ HIDDEN-->
                 <tr>
                     <td class="td_1">Flight to {{x.country}}</td>
                          
-                    <td (click)="flight1_e()" class="tdRest one">Price pro person with <span
+                    <td (click)="flight1_e()" class="tdRest">Price pro person with <span
                             class="coFlight">{{x.flight[0]}}</span> <span id="0"
-                            class="spanPrice">{{x.priceProFlight[0]}}</span></td>
+                            class="spanPrice" >{{x.priceProFlight[0]}}</span></td>
 
-                    <td (click)="flight2_e()" class="tdRest two">Price pro person with <span
+                    <td (click)="flight2_e()" class="tdRest">Price pro person with <span
                             class="coFlight">{{x.flight[1]}}</span><span id="1"
                             class="spanPrice">{{x.priceProFlight[1]}}</span></td>
                             
-                    <td (click)="flight3_e()" class="tdRest three" >Price pro person with <span
+                    <td (click)="flight3_e()" class="tdRest" >Price pro person with <span
                             class="coFlight">{{x.flight[2]}}</span><span id="2"
                             class="spanPrice">{{x.priceProFlight[2]}}</span></td>
                 </tr>

@@ -131,68 +131,39 @@ export class HomepageComponent {
 
 
   //---------------------- onClick get td price give back for calc ---------------//
-
-
-
   flight1_e() {
     let price = document.getElementById('h33') as HTMLElement;
-    let flight1 = document.getElementById('0') as HTMLElement;
-    let flight11: string = flight1.innerHTML;
-    flight1.addEventListener('click', () => {
-      for (let i = 0; i < this.Product.length; i++) {
-        if (String(this.Product[i].priceProFlight[0]) == flight11) {
-          price.innerHTML = `${flight11} pro person`;
-        } else if (String(this.Product[i].priceProFlight[1]) == flight11) {
-          price.innerHTML = `${flight11} pro person`;
-        } else if (String(this.Product[i].priceProFlight[2]) == flight11) {
-          price.innerHTML = `${flight11} pro person`;
-        }
-      }
-    })
-  };
 
+    let a = document.getElementById('0');
+    let b: any = a?.innerHTML;
+    var numb: any = b.match(/\d/g);
+    numb = numb.join("");
+    price.innerHTML = numb;
 
+    console.log(numb)
+  }
   flight2_e() {
     let price = document.getElementById('h33') as HTMLElement;
-    let flight2 = document.getElementById('1') as HTMLElement;
-    let flight22: string = flight2.innerHTML;
-    flight2.addEventListener('click', () => {
-      for (let i = 0; i < this.Product.length; i++) {
-        if (String(this.Product[i].priceProFlight[0]) == flight22) {
-          price.innerHTML = `${flight22} pro person`;
-        } else if (String(this.Product[i].priceProFlight[1]) == flight22) {
-          price.innerHTML = `${flight22} pro person`;
-        } else if (String(this.Product[i].priceProFlight[2]) == flight22) {
-          price.innerHTML = `${flight22} pro person`;
-        }
-      }
-    })
-  };
 
+    let a = document.getElementById('1');
+    let b: any = a?.innerHTML;
+    var numb: any = b.match(/\d/g);
+    numb = numb.join("");
+    price.innerHTML = numb;
+
+    console.log(numb)
+  }
   flight3_e() {
     let price = document.getElementById('h33') as HTMLElement;
-    let flight3 = document.getElementById('2') as HTMLElement;
-    let flight33: string = flight3.innerHTML;
-    flight3.addEventListener('click', () => {
-      for (let i = 0; i < this.Product.length; i++) {
-        if (String(this.Product[i].priceProFlight[0]) == flight33) {
-          price.innerHTML = `${flight33} pro person`;
-        } else if (String(this.Product[i].priceProFlight[1]) == flight33) {
-          price.innerHTML = `${flight33} pro person`;
-        } else if (String(this.Product[i].priceProFlight[2]) == flight33) {
-          price.innerHTML = `${flight33} pro person`;
-        }
-      }
-    })
-  };
 
-  /*------------------------------- calc ---------------------------------------*/
-  Calc() {
-    let price = document.getElementById('h33') as HTMLElement;
-    let pr: string = price.innerHTML;
-    let priceSumPerson = Number(pr) * Number(this.pieceOfProduct);
-    let ar = price.innerHTML = priceSumPerson.toString();
-    return ar
+    let a = document.getElementById('2');
+    let b: any = a?.innerHTML;
+    var numb: any = b.match(/\d/g);
+    numb = numb.join("");
+    price.innerHTML = numb;
+
   }
-
+ 
 }
+
+
