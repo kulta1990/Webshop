@@ -118,52 +118,57 @@ export class HomepageComponent {
   };
 
 
-  //[(ngModel)]='pieceOfPruduct_1'
+  //[(ngModel)]=''
   pieceOfProduct = document.getElementById('res') as HTMLInputElement | null;
   pieceOfProduct_1 = this.pieceOfProduct?.value;
 
-  //-------------------- Avoid NaN ---------------------------------//
-  vbn(): void {
-    if (Number.isNaN(this.pieceOfProduct_1)) {
-      this.pieceOfProduct_1 = '';
-    }
-  };
-
-
+  
   //---------------------- onClick get td price give back for calc ---------------//
   flight1_e() {
     let price = document.getElementById('h33') as HTMLElement;
 
     let a = document.getElementById('0');
     let b: any = a?.innerHTML;
-    var numb: any = b.match(/\d/g);
-    numb = numb.join("");
-    price.innerHTML = numb;
+    let numb1: any = b.match(/\d/g);
+    numb1 = numb1.join("");
 
-    console.log(numb)
+
+    let pr = Number(this.pieceOfProduct_1) * numb1
+    price.innerHTML = `${pr.toString()} USD  for ${Number(this.pieceOfProduct_1)} Person incl. Tax`
+    console.log(numb1)
   }
+
+
   flight2_e() {
     let price = document.getElementById('h33') as HTMLElement;
 
     let a = document.getElementById('1');
     let b: any = a?.innerHTML;
-    var numb: any = b.match(/\d/g);
-    numb = numb.join("");
-    price.innerHTML = numb;
+    let numb2: any = b.match(/\d/g);
+    numb2 = numb2.join("");
 
-    console.log(numb)
+    let pr = Number(this.pieceOfProduct_1) * numb2
+    price.innerHTML = `${pr.toString()} USD  for ${Number(this.pieceOfProduct_1)} Person incl. Tax`
+    console.log(numb2)
   }
+
+
   flight3_e() {
     let price = document.getElementById('h33') as HTMLElement;
 
     let a = document.getElementById('2');
     let b: any = a?.innerHTML;
-    var numb: any = b.match(/\d/g);
-    numb = numb.join("");
-    price.innerHTML = numb;
+    let numb3: any = b.match(/\d/g);
+    numb3 = numb3.join("");
+
+    let pr = Number(this.pieceOfProduct_1) * numb3
+    price.innerHTML = `${pr.toString()} USD  for ${Number(this.pieceOfProduct_1)} Person incl. Tax`
+
 
   }
- 
+
+  datum:string = new Date().toString();
+
 }
 
 

@@ -23,7 +23,7 @@
  }
 
  /*-----------------------  MAIN cards  container --------------------------*/
- 
+
  .container-cards {
      display: flexbox;
      max-width: 1200px;
@@ -245,6 +245,7 @@
      margin-left: 15px;
  }
 
+ /*----------------------------- Price / Flight table -----------------*/
  table {
      color: var(--color-white);
      margin-top: 10px;
@@ -297,3 +298,33 @@
      color: rgb(0, 0, 0);
      margin-right: 8px;
  }
+
+ /*------------------- Add info P + Span-----------------*/
+ #P_addInfo {
+     margin: 10px 0px;
+     color: rgb(103, 97, 97);
+
+ }
+
+ #addInfoSpan {
+     font-weight: 700;
+     color: #647680;
+ }
+
+ /*--------------------footer --------------------*/
+
+ footer {
+     height: 4rem;
+     width: 100%;
+     background-color: var(--color-primary_3);
+     position: absolute;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     z-index: +1;
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: 700;
+     letter-spacing: 2pt;
+     margin-top: 2rem;
+ }
+

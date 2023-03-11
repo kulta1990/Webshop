@@ -13,7 +13,7 @@ h1 {
     font-family: cursive;
     color: rgb(122, 126, 130);
     margin-bottom: 30px;
-    text-shadow: 0.5px 0.5px  rgb(90, 89, 89);
+    text-shadow: 0.5px 0.5px rgb(90, 89, 89);
 }
 
 input {
@@ -44,13 +44,14 @@ li {
     list-style-image: url('../../assets/check.png');
     color: rgb(122, 126, 130);
     margin: 30px;
-font-size: 0.8rem;
+    font-size: 0.8rem;
 }
 
 .hr {
     margin: 30px;
 }
-hr{
+
+hr {
     border: 0.2px solid black;
     border-bottom: none;
 }
@@ -86,6 +87,9 @@ li::first-letter {
     letter-spacing: 1.2pt;
     margin-left: 4px;
 }
+li{
+    font-weight: 800;
+}
 
 span {
     top: -20px;
@@ -119,8 +123,24 @@ hr {
     width: 100%;
 
 }
-h3{
+
+h3 {
     color: rgb(211, 134, 32);
-    text-shadow: 0.5px 0.5px  rgb(90, 89, 89);
+    text-shadow: 0.5px 0.5px rgb(90, 89, 89);
 }
 
+/*--------------------footer --------------------*/
+
+footer {
+    height: 4rem;
+    width: 100%;
+    background-color: var(--color-primary_3);
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: +1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    letter-spacing: 2pt;
+}

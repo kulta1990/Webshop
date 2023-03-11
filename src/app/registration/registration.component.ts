@@ -34,4 +34,6 @@ console.log(email)
 
   }
 
+
+  datum:string = new Date().toString();
 }

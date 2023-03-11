@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="holder">
-       
+
         <form class="form" action="#" method="post">
             <h1>Registration</h1>
             <i class="fa-solid fa-user"></i>
@@ -16,7 +16,9 @@
             <button type="submit" id="btnReg" (click)="Regexp()">Registration</button>
             <button type="submit" id='btnSign'>Sign In</button>
         </form>
-        <span class="hr"><hr></span>
+        <span class="hr">
+            <hr>
+        </span>
         <h3>Please carefully fill out this form contains the following:</h3>
         <ul>
             <li>
@@ -32,3 +34,7 @@
     </div>
 
 </div>
+<footer>
+    <p>Tour Company&copy;</p>
+    <p id="datum">{{datum | date:"short"}}</p>
+</footer>

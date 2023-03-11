@@ -5,11 +5,13 @@ HIDDEN-->
     <i id="close" class="fa-sharp fa-solid fa-xmark fa-4x" (click)="CloseDiv()"></i>
     <div id="buyDiv">
         <i class="fa-sharp fa-solid fa-cart-arrow-down fa-3x" id="cartIco"></i>
-        <input [(ngModel)]="pieceOfProduct_1" type="number" name="res" id="res" placeholder="1" min="1" max="20">
+        <input [(ngModel)]="pieceOfProduct_1" type="number" name="res" id="res" placeholder="0" min="1" max="20">
         <button type="button" class="btn" id="btn" (click)="Rotate()">Confirm</button><br>
-        <h3>Person(s): <span style="margin-left: 30px;">{{pieceOfProduct_1}} PC(s)</span></h3>
-        <h3 id="h33" style="color:black"></h3>
-        <h3></h3>
+        <p id="P_addInfo"><span id="addInfoSpan">Additional info:</span> First of all choose the number of PC(s) then click on the choosen price/flight/target feld for the price summary</p>
+        <h3>Person(s): <span style="margin-left: 30px;">{{pieceOfProduct_1}} PC(s)</span></h3><br>
+        <h3 id="h33"></h3>
+
+        
         <div id="hrCart">
             <hr>
         </div>
@@ -62,3 +64,9 @@ HIDDEN-->
         </div>
     </div>
 </div>
+
+<!-- footer-->
+<footer>
+    <p>Tour Company&copy;</p>
+    <p id="datum">{{datum | date:"short"}}</p>
+</footer>
