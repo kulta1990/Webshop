@@ -84,7 +84,7 @@ export class HomepageComponent {
 
   //-------------------- Button rotate 360deg on click ---------------------------------// 
   Rotate() {
-    const btn = document.getElementById('btn') as HTMLElement;
+    let btn = document.getElementById('btn') as HTMLElement;
     btn?.addEventListener('click', () => {
       btn?.classList.toggle('buttonActive')
     })
@@ -93,8 +93,8 @@ export class HomepageComponent {
 
   //-------------------- Open Cart Pop-up ---------------------------------//
   ShowCartDiv() {
-    var cartDiv = document.getElementById('cartContainer') as HTMLElement;
-    var cartDisplay = window.getComputedStyle(cartDiv).getPropertyValue('display');
+    let cartDiv = document.getElementById('cartContainer') as HTMLElement;
+    let cartDisplay = window.getComputedStyle(cartDiv).getPropertyValue('display');
     if (cartDisplay === 'none') {
       cartDiv.style.display = 'block';
     } else {
@@ -105,11 +105,37 @@ export class HomepageComponent {
 
   //-------------------- Close Cart Pop-up ---------------------------------//
   CloseDiv() {
-    var el = document.getElementById('cartContainer') as HTMLElement;
-    const btn = document.getElementById('close') as HTMLInputElement;
+    let el = document.getElementById('cartContainer') as HTMLElement;
+    let btn = document.getElementById('close') as HTMLInputElement;
 
 
     btn.addEventListener('click', () => {
+      if (el.style.display !== 'none') {
+        el.style.display = 'none';
+      }
+    });
+
+  };
+
+   //-------------------- Open details Pop-up ---------------------------------//
+   ShowCartDiv_1() {
+    let cartDiv = document.getElementById('container_2') as HTMLElement;
+    let cartDisplay = window.getComputedStyle(cartDiv).getPropertyValue('display');
+    if (cartDisplay === 'none') {
+      cartDiv.style.display = 'block';
+    } else {
+      cartDiv.style.display = 'none';
+    }
+  }
+
+
+  //-------------------- Close details Pop-up ---------------------------------//
+  CloseDiv_1() {
+    let el = document.getElementById('container_2') as HTMLElement;
+    let btn_2 = document.getElementById('close_1') as HTMLInputElement;
+
+
+    btn_2.addEventListener('click', () => {
       if (el.style.display !== 'none') {
         el.style.display = 'none';
       }

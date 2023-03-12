@@ -1,6 +1,4 @@
-<!-- Cart -->
-<!--<div class="container" id="cartContainer">
-HIDDEN-->
+<!-- Shop Cart pop-up -->
 <div class="container" id="cartContainer">
     <i id="close" class="fa-sharp fa-solid fa-xmark fa-4x" (click)="CloseDiv()"></i>
     <div id="buyDiv">
@@ -39,6 +37,33 @@ HIDDEN-->
     </div>
 </div>
 
+<!-- details Cart pop-up -->
+<div class="container_2" id="container_2">
+    <div class="detailsContainer">
+        <div>
+            <i id="close_1" class="fa-sharp fa-solid fa-xmark fa-4x" (click)="CloseDiv_1()"></i><br>
+            <h2>Lorem</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque accusamus cum neque vitae odio
+                temporibus impedit autem assumenda quas doloribus, incidunt obcaecati, doloremque eum officia quod
+                non maiores debitis quia.Assumenda dolor, non voluptates est deleniti excepturi odio,
+                saepe repellat facere deserunt voluptatibus ipsam porro tempora, architecto doloremque dicta
+                corporis! Facere id exercitationem provident consectetur rem eius omnis debitis
+                aspernatur?<span  class="fontColor">quasi illum</span>, omnis nam facilis reprehenderit placeat consectetur aut
+                nesciunt doloribus! Officia fuga saepe corporis voluptatum repellendus voluptates a? Consectetur, ut
+                ratione dignissimos reiciendis mollitia vero magni placeat laborum suscipit?Eos
+                possimus distinctio nobis earum corrupti aliquam cupiditate optio ut dolores ipsum facilis harum
+                voluptate quia accusantium quo reiciendis maiores aperiam iusto vel, rem eaque obcaecati laborum.
+                Ipsum, voluptatibus. <span class="fontColor">Temporibus</span>.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit quasi ex ad deserunt sunt illo fuga
+                quos, eos dolorum officia provident est sequi repudiandae natus quo inventore, molestiae laudantium
+                aspernatur!Minima quibusdam enim commodi tenetur doloribus iste neque dicta voluptatum
+                eaque inventore placeat doloremque, libero error, accusantium facilis laudantium nisi autem
+                architecto molestiae voluptatem sunt totam. Laboriosam vel ipsa soluta.</p>
+
+        </div>
+    </div>
+
+</div>
 
 <!-- Main H1-->
 <div id="main">
@@ -55,7 +80,7 @@ HIDDEN-->
                 <div class="text">
                     <h4><b>{{i.country}}</b></h4>
                     <p>{{i.text}}</p>
-                    <button type="button" class="btn" id="btn">More about</button><br>
+                    <button type="button" class="btn" id="btn_2" (click)="ShowCartDiv_1()">More about</button><br>
                     <button type="button" id="btnBuy" (click)="ShowCartDiv()">Buy</button>
                 </div>
             </div>

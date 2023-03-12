@@ -22,6 +22,7 @@
 
  }
 
+
  /*-----------------------  MAIN cards  container --------------------------*/
 
  .container-cards {
@@ -30,6 +31,7 @@
      padding-top: 30px;
      margin: 0px auto;
      text-align: center;
+     background-image: url('../../assets/Abstract-background-white-12.jpg');
  }
 
  .card1 {
@@ -311,6 +313,51 @@
      color: #647680;
  }
 
+ /*-----------------  details container pop-up ------------------*/
+ .container_2 {
+     position: fixed;
+     box-sizing: border-box;
+
+     width: 80%;
+     height: 80%;
+     margin-top: 3%;
+     margin-left: 10%;
+     z-index: +1;
+     background: linear-gradient(45deg, rgb(225, 221, 219), rgb(125, 123, 123), rgb(163, 142, 142), rgb(120, 110, 110), rgb(174, 168, 168), rgb(202, 196, 196));
+     background-repeat: repeat-x;
+     border-radius: 15px;
+     padding: 30px;
+     justify-content: start;
+     /*  display: none;*/
+     overflow-y: scroll;
+ }
+
+ .imgDetails {
+     max-width: 200px;
+     max-height: 200px;
+     object-fit: contain;
+
+ }
+
+ #close_1 {
+     clear: right;
+ }
+
+ p {
+     text-indent: 15px;
+     margin-left: 10px;
+ }
+ h2{
+    margin: 20px;
+    color: #3d3e3f;
+    font-style: italic;
+ }
+
+ p::first-letter {
+     font-size: 1.5rem;
+     font-weight: 600;
+ }
+
  /*--------------------footer --------------------*/
 
  footer {
@@ -327,4 +374,3 @@
      letter-spacing: 2pt;
      margin-top: 2rem;
  }
-
