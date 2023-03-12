@@ -10,8 +10,13 @@
             <i class="fa-solid fa-envelope"></i>
             <input type="email" name="email" required id="email" placeholder="E-mail:"><br><br>
             <i class="fa-solid fa-key"></i>
+            <img src="../../assets/icons8-show-password-50.png" alt="eye" title="eye" id="eye1" class="eye"
+                (click)="PassShow()">
             <input type="password" required name="password" id="password" placeholder="Password:"><br>
             <i class="fa-solid fa-key"></i>
+            <img (click)="PassShow()" src="../../assets/icons8-show-password-50.png" alt="eye" title="eye" class="eye"
+                id="eye2" (click)="PassShow()">
+
             <input type="password" name="password_again" id="password_again" placeholder="Password again:"><br><br>
             <button type="submit" id="btnReg" (click)="Regexp()">Registration</button>
             <button type="submit" id='btnSign'>Sign In</button>

@@ -8,18 +8,22 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Projekt1';
 
- 
-  datum:string = new Date().toString();
+  /*------------------  datum footer --------------------- */
+  datum: string = new Date().toString();
 
-
-  EaseInOut(): void {
-    const burger = document.getElementById('burgerMenu');
-    const nav = document.getElementById('nav');
+  /*---------------- Navbar EaseInOut smooth ----------------- */
+  EaseInOut():void {
+    let burger = document.getElementById('burgerMenu');
+    let navi = document.getElementById('nav') as HTMLElement;
+    let nav: string = navi.style.animationName;
     burger?.addEventListener('click', () => {
-      nav?.classList.toggle('menu-active');
-      burger?.classList.remove('fa-solid fa-bars fa-xl');
-      burger?.classList.add('fa-solid fa-phone-volume');
+      if (nav != 'opened') {
+        navi.style.animationName = 'opened';
+      } else {
+        navi.style.animationName = 'closed';
+
+      }
     });
-  };
+  }
 };
 

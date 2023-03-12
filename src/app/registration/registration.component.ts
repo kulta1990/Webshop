@@ -7,18 +7,21 @@ import { Component } from '@angular/core';
 })
 export class RegistrationComponent {
 
+
+
+  /*------------------------ Email and Password Validation ----------- */
   Regexp() {
-    
+
     const event = document.getElementById('btnReg');
     event?.addEventListener('click', () => {
-      let a: any = document.getElementById('email') as HTMLElement | null;
-      let d: any = document.getElementById('password') as HTMLElement | null;
-      let e: any = document.getElementById('password_again') as HTMLElement | null;
+      const a: any = document.getElementById('email') as HTMLElement | null;
+      const d: any = document.getElementById('password') as HTMLElement | null;
+      const e: any = document.getElementById('password_again') as HTMLElement | null;
 
-      let email: any = a.value;
       let password: any = d.value;
+      let email: any = a.value;
       let passwordAgain: any = e.value;
-console.log(email)
+
       let regexEmail: RegExp = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
       let regexPasswort: RegExp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{5,}$/;
 
@@ -26,7 +29,7 @@ console.log(email)
       if (!(regexEmail.test(email))) {
         alert('Not valid e-mail address!');
       } else if (!(regexPasswort.test(password))) {
-       alert('The password must be min. 5 character and must contain min. 1 uppercase + min. 1 lowercase + sign!');
+        alert('The password must be min. 5 character and must contain min. 1 uppercase + min. 1 lowercase + sign!');
       } else if (password !== passwordAgain) {
         alert('The passwords do not match!');
       }
@@ -34,6 +37,32 @@ console.log(email)
 
   }
 
+  /*------------------ datum footer live ---------------------------- */
+  datum: string = new Date().toString();
 
-  datum:string = new Date().toString();
+  /*--------------------------- Password show on click toggle between type text and pass ---------------- */
+  PassShow(): void {
+    let pass = document.getElementById('password') as HTMLInputElement;
+    let passAgain = document.getElementById('password_again') as HTMLInputElement;
+    let img1 = document.getElementById('eye1');
+    let img2 = document.getElementById('eye2');
+    let passs = pass?.getAttribute('type');
+    let passsAgain = passAgain?.getAttribute('type');
+    img1?.addEventListener('click', () => {
+      if (passs == 'text') {
+        document.getElementById('password')?.setAttribute('type', 'password');
+      } else {
+        document.getElementById('password')?.setAttribute('type', 'text');
+      }
+    });
+    img2?.addEventListener('click', () => {
+      if (passsAgain == 'text') {
+        document.getElementById('password_again')?.setAttribute('type', 'password');
+      } else {
+        document.getElementById('password_again')?.setAttribute('type', 'text');
+      }
+    });
+  }
 }
+
+
