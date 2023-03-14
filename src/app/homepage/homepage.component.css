@@ -6,7 +6,7 @@
  /*---------------- Font StyleLink #cartContainer > p ---------------------*/
  @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 
-
+ @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap');
 
 
 
@@ -328,7 +328,7 @@
      border-radius: 15px;
      padding: 30px;
      justify-content: start;
-     /*  display: none;*/
+     display: none;
      overflow-y: scroll;
  }
 
@@ -343,20 +343,83 @@
      clear: right;
  }
 
- p {
+ .p {
      text-indent: 15px;
      margin-left: 10px;
- }
- h2{
-    margin: 20px;
-    color: #3d3e3f;
-    font-style: italic;
+     margin-bottom: 20px;
+     font-family: 'PT Serif', serif;
+     font-size: 0.9rem;
+    
+     letter-spacing: 0.5pt;
+     color: #5c3f3f;
  }
 
- p::first-letter {
-     font-size: 1.5rem;
+ .h2 {
+     margin: 20px;
+     color: #3d3e3f;
+     font-style: italic;
+ }
+
+ .p::first-letter {
+     font-size: 1.7rem;
+     margin-right: 2px;
      font-weight: 600;
  }
+ .col-6 {
+    max-width: 50%;
+    display: inline-block;
+}
+
+#imgPopUp1 {
+    max-width: 300px;
+    float: right;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px #e9d9af;
+
+}
+
+.aside {
+    float: right;
+    max-width: 45%;
+}
+
+#table {
+    margin-top: 50px;
+    border-left: 5px solid #3d3e3f;
+
+}
+
+.th {
+    font-size: 1.1rem;
+    background-color: #9fa3a7;
+    padding: 5px;
+}
+
+.td {
+    padding: 5px;
+    font-size: 1rem;
+    color: #433c3c;
+    font-family: 'Shadows Into Light', cursive;
+    letter-spacing: 0.5pt;
+    font-weight: 600;
+
+}
+
+@media screen and (max-width:829px) {
+    .col-6 {
+        max-width: 100%;
+    }
+
+    .aside {
+        float: right;
+        max-width: 100%;
+    }
+
+    #table {
+        margin-top: 0px;
+    }
+}
 
  /*--------------------footer --------------------*/
 
@@ -374,3 +437,4 @@
      letter-spacing: 2pt;
      margin-top: 2rem;
  }
+
