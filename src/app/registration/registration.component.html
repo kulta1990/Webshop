@@ -1,14 +1,15 @@
 <div class="container-fluid">
     <div class="holder">
 
-        <form class="form" action="#" method="post">
+        <form class="form" action="/post.php" method="post">
             <h1>Registration</h1>
             <i class="fa-solid fa-user"></i>
             <input type="text" name="Fname" required id="Fname" minlength="1" placeholder="First Name:"><br>
             <i class="fa-solid fa-user"></i>
             <input type="text" name="Lname" required id="Lname" minlength="1" placeholder="Family Name:"><br>
             <i class="fa-solid fa-envelope"></i>
-            <input type="email" name="email" required id="email" placeholder="E-mail:"><br><br>
+            <input type="email" name="email" required id="email" placeholder="E-mail:"><br>
+            <p id="smallEmail"></p>
             <i class="fa-solid fa-key"></i>
             <img src="../../assets/icons8-show-password-50.png" alt="eye" title="eye" id="eye1" class="eye"
                 (click)="PassShow()">
@@ -17,7 +18,8 @@
             <img (click)="PassShow()" src="../../assets/icons8-show-password-50.png" alt="eye" title="eye" class="eye"
                 id="eye2" (click)="PassShow()">
 
-            <input type="password" name="password_again" id="password_again" placeholder="Password again:"><br><br>
+            <input type="password" name="password_again" id="password_again" placeholder="Password again:"><br>
+            <p id="smallEmail"></p>
             <button type="submit" id="btnReg" (click)="Regexp()">Registration</button>
             <button type="submit" id='btnSign'>Sign In</button>
         </form>
@@ -38,6 +40,11 @@
         </ul>
     </div>
 
+</div>
+<!--  If it's OK pop-up OK section -->
+<div id="OK">
+    <img id="imgOK" src="../../assets/check.png" alt="check" title="check">
+    <p>SUCCESS!</p>
 </div>
 <footer>
     <p>Tour Company&copy;</p>

@@ -27,11 +27,14 @@ export class RegistrationComponent {
 
 
       if (!(regexEmail.test(email))) {
-        alert('Not valid e-mail address!');
+        let textEmail = document.querySelector('#smallEmail') as HTMLElement;
+        textEmail.innerHTML = 'Invalid e-mail address!';
       } else if (!(regexPasswort.test(password))) {
-        alert('The password must be min. 5 character and must contain min. 1 uppercase + min. 1 lowercase + sign!');
+        let textEmail = document.querySelector('#smallEmail') as HTMLElement;
+        textEmail.innerHTML = 'The password must be min. 5 character and must contain min. 1 uppercase + min. 1 lowercase + sign!';
       } else if (password !== passwordAgain) {
-        alert('The passwords do not match!');
+        let textEmail = document.querySelector('#smallEmail') as HTMLElement;
+        textEmail.innerHTML = 'The passwords do not match!';
       }
     })
 
@@ -63,6 +66,9 @@ export class RegistrationComponent {
       }
     });
   }
+
+
+
 }
 
 
