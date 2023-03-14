@@ -3,7 +3,8 @@
 }
 
 .container-fluid {
-    background-image: linear-gradient(to right, rgb(242, 232, 232), rgb(192, 174, 174), grey, rgb(227, 99, 99));
+    background-image: url('../../assets/Abstract-background-white-12.jpg');
+    background-repeat: no-repeat;
 
 }
 
@@ -28,7 +29,7 @@ input {
 input:focus {
     width: 260px;
     height: 30px;
-    background-color: rgb(198, 196, 192);
+    background-color: rgb(255, 252, 156);
     font-weight: 700;
 }
 
@@ -110,6 +111,7 @@ span {
 ul {
     margin-top: 40px;
 
+
 }
 
 .holder {
@@ -117,8 +119,8 @@ ul {
     margin: 0px auto;
     padding: 40px;
     height: 700px;
-    background-color: bisque;
-    box-shadow: 10px 0px 20px burlywood, -10px 0px 20px burlywood;
+    background-color: rgb(202, 198, 193);
+    box-shadow: 10px 0px 20px rgb(152, 137, 117), -10px 0px 20px rgb(152, 137, 117);
 
 }
 
@@ -126,7 +128,6 @@ ul {
     margin-top: 3rem;
     margin: 0px auto;
     text-align: center;
-
 }
 
 hr {
@@ -158,12 +159,9 @@ footer {
 
 /*-------------  responsive for iPhone SE or smaller --------------*/
 @media screen and (max-width: 400px) {
-    footer {
-        margin-top: 8rem;
-    }
 
     .holder {
-        background-color: white;
+        height: 100vh;
         box-shadow: none;
     }
 }
