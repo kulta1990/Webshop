@@ -3,7 +3,7 @@
     <i id="close" class="fa-sharp fa-solid fa-xmark fa-4x" (click)="CloseDiv()"></i>
     <div id="buyDiv">
         <i class="fa-sharp fa-solid fa-cart-arrow-down fa-3x" id="cartIco"></i>
-        <input [(ngModel)]="pieceOfProduct_1" type="number" name="res" id="res" placeholder="0" min="1" max="20">
+        <input [(ngModel)]="pieceOfProduct_1" type="number" name="res" id="res" placeholder="0" min="0" max="20">
         <button type="button" class="btn" id="btn" (click)="Rotate()">Confirm</button><br>
         <p id="P_addInfo"><span id="addInfoSpan">Additional info:</span> First of all choose the number of PC(s) then
             click on the choosen price/flight/target feld for the price summary</p>
@@ -16,21 +16,24 @@
             <thead>
                 <th colspan="4">Click on the choosen flight & price</th>
             </thead>
-            <tbody *ngFor="let x of Product">
-                <tr>
+            <tbody>
+                <tr *ngFor="let x of Product">
                     <td class="td_1">Flight to {{x.country}}</td>
 
-                    <td (click)="flight1_e()" class="tdRest">Price pro person with <span
-                            class="coFlight">{{x.flight[0]}}</span> <span id="0"
-                            class="spanPrice">{{x.priceProFlight[0]}}</span></td>
 
-                    <td (click)="flight2_e()" class="tdRest">Price pro person with <span
-                            class="coFlight">{{x.flight[1]}}</span><span id="1"
+                    <td (click)="flight1_e()" class="tdRest">Price pro person with <span
+                            class="coFlight">{{x.flight[1]}}</span><span id="0"
                             class="spanPrice">{{x.priceProFlight[1]}}</span></td>
 
-                    <td (click)="flight3_e()" class="tdRest">Price pro person with <span
-                            class="coFlight">{{x.flight[2]}}</span><span id="2"
+                    <td (click)="flight1_e()" class="tdRest">Price pro person with <span
+                            class="coFlight">{{x.flight[2]}}</span><span id="0"
                             class="spanPrice">{{x.priceProFlight[2]}}</span></td>
+
+                    <td (click)="flight1_e()" class="tdRest">Price pro person with <span
+                            class="coFlight">{{x.flight[0]}}</span><span id="0"
+                            class="spanPrice">{{x.priceProFlight[0]}}</span></td>
+
+
                 </tr>
             </tbody>
         </table>
@@ -47,7 +50,8 @@
                 <div class="col-6">
                     <img src="../../assets/200512103822-maldives-bungalow-aerial.jpg" alt="imgPopUp1" title="imgPopUp1"
                         id="imgPopUp1">
-                    <p class="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque accusamus cum neque vitae odio
+                    <p class="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque accusamus cum neque
+                        vitae odio
                         temporibus impedit autem assumenda quas doloribus, incidunt obcaecati, doloremque eum officia
                         quod
                         non maiores debitis quia.Assumenda dolor, non voluptates est deleniti excepturi odio,
@@ -62,8 +66,9 @@
                         voluptate quia accusantium quo reiciendis maiores aperiam iusto vel, rem eaque obcaecati
                         laborum.
                         Ipsum, voluptatibus. <span class="fontColor">Temporibus</span>.</p>
-                   <hr>
-                        <p class="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit quasi ex ad deserunt sunt illo fuga
+                    <hr>
+                    <p class="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit quasi ex ad deserunt sunt
+                        illo fuga
                         quos, eos dolorum officia provident est sequi repudiandae natus quo inventore, molestiae
                         laudantium
                         aspernatur!Minima quibusdam enim commodi tenetur doloribus iste neque dicta voluptatum
@@ -76,7 +81,8 @@
                         <tbody>
                             <tr>
                                 <th class="th">Lorem</th>
-                                <td class="td">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident fuga molestiae
+                                <td class="td">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident fuga
+                                    molestiae
                                     blanditiis minus dolore aut mollitia facilis rem tempore dignissimos. Voluptatem,
                                     pariatur eius. Aperiam omnis cum alias, expedita neque molestiae.
                                     Iusto nulla eligendi minus debitis? Cupiditate, at! Laborum est eum velit autem
@@ -86,7 +92,8 @@
                             </tr>
                             <tr>
                                 <th class="th">Lorem</th>
-                                <td class="td">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vel asperiores
+                                <td class="td">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vel
+                                    asperiores
                                     nesciunt fugit porro dolor necessitatibus voluptas! Rem quis recusandae
                                     exercitationem
                                     deleniti iusto laborum aliquid magnam quod quia! Cumque, iure.

@@ -13,17 +13,17 @@ export class AppComponent {
 
   /*---------------- Navbar EaseInOut smooth ----------------- */
   EaseInOut():void {
-    let burger = document.getElementById('burgerMenu');
+   
     let navi = document.getElementById('nav') as HTMLElement;
     let nav: string = navi.style.animationName;
-    burger?.addEventListener('click', () => {
+    
       if (nav != 'opened') {
         navi.style.animationName = 'opened';
       } else {
         navi.style.animationName = 'closed';
 
       }
-    });
+   
   }
 };
 

@@ -328,7 +328,7 @@
      border-radius: 15px;
      padding: 30px;
      justify-content: start;
-     /*display: none;*/
+     display: none;
      overflow-y: scroll;
  }
 

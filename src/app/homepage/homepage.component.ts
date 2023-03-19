@@ -85,9 +85,7 @@ export class HomepageComponent {
   //-------------------- Button rotate 360deg on click ---------------------------------// 
   Rotate() {
     let btn = document.getElementById('btn') as HTMLElement;
-    btn?.addEventListener('click', () => {
-      btn?.classList.toggle('buttonActive')
-    })
+    btn?.classList.toggle('buttonActive');
   };
 
 
@@ -99,48 +97,35 @@ export class HomepageComponent {
       cartDiv.style.display = 'block';
     } else {
       cartDiv.style.display = 'none';
-    }
-  }
+    };
+  };
 
 
   //-------------------- Close Cart Pop-up ---------------------------------//
   CloseDiv() {
-    let el = document.getElementById('cartContainer') as HTMLElement;
-    let btn = document.getElementById('close') as HTMLInputElement;
-
-
-    btn.addEventListener('click', () => {
-      if (el.style.display !== 'none') {
-        el.style.display = 'none';
-      }
-    });
-
+    let el = document.getElementById('cartContainer') as HTMLInputElement;
+    if (el.style.display !== 'none') {
+      el.style.display = 'none';
+    };
   };
 
-   //-------------------- Open details Pop-up ---------------------------------//
-   ShowCartDiv_1() {
+  //-------------------- Open details Pop-up ---------------------------------//
+  ShowCartDiv_1() {
     let cartDiv = document.getElementById('container_2') as HTMLElement;
     let cartDisplay = window.getComputedStyle(cartDiv).getPropertyValue('display');
     if (cartDisplay === 'none') {
       cartDiv.style.display = 'block';
     } else {
       cartDiv.style.display = 'none';
-    }
-  }
-
+    };
+  };
 
   //-------------------- Close details Pop-up ---------------------------------//
   CloseDiv_1() {
-    let el = document.getElementById('container_2') as HTMLElement;
-    let btn_2 = document.getElementById('close_1') as HTMLInputElement;
-
-
-    btn_2.addEventListener('click', () => {
-      if (el.style.display !== 'none') {
-        el.style.display = 'none';
-      }
-    });
-
+    let el = document.getElementById('container_2') as HTMLInputElement;
+    if (el.style.display !== 'none') {
+      el.style.display = 'none';
+    };
   };
 
 
@@ -148,53 +133,66 @@ export class HomepageComponent {
   pieceOfProduct = document.getElementById('res') as HTMLInputElement | null;
   pieceOfProduct_1 = this.pieceOfProduct?.value;
 
-  
+
   //---------------------- onClick get td price give back for calc ---------------//
   flight1_e() {
     let price = document.getElementById('h33') as HTMLElement;
-
-    let a = document.getElementById('0');
+    let a = document.querySelector('.spanPrice') as HTMLElement;
     let b: any = a?.innerHTML;
     let numb1: any = b.match(/\d/g);
-    numb1 = numb1.join("");
+    let numb2 = numb1.join("");
+    let pr = Number(this.pieceOfProduct_1) * numb2;
+    price.innerHTML = `${pr.toString()} USD  for ${Number(this.pieceOfProduct_1)} Person incl. Tax`;
+    
+    let pieceOfProduct = document.getElementById('res') as HTMLInputElement |  null;
+    let pieceOfProduct_1 = pieceOfProduct?.value;
 
-
-    let pr = Number(this.pieceOfProduct_1) * numb1
-    price.innerHTML = `${pr.toString()} USD  for ${Number(this.pieceOfProduct_1)} Person incl. Tax`
-    console.log(numb1)
+    if (this.pieceOfProduct_1 == '0' || pieceOfProduct_1 == '') {
+      let price = document.getElementById('h33') as HTMLElement;
+      price.innerHTML = '';
+    }
   }
 
 
   flight2_e() {
     let price = document.getElementById('h33') as HTMLElement;
-
-    let a = document.getElementById('1');
+    let a = document.getElementById('1') as HTMLElement;
     let b: any = a?.innerHTML;
     let numb2: any = b.match(/\d/g);
-    numb2 = numb2.join("");
+    let numb = numb2.join("");
+    let pr = Number(this.pieceOfProduct_1) * numb;
+    price.innerHTML = `${pr.toString()} USD  for ${Number(this.pieceOfProduct_1)} Person incl. Tax`;
+  
+    let pieceOfProduct = document.getElementById('res') as HTMLInputElement |  null;
+    let pieceOfProduct_1 = pieceOfProduct?.value;
 
-    let pr = Number(this.pieceOfProduct_1) * numb2
-    price.innerHTML = `${pr.toString()} USD  for ${Number(this.pieceOfProduct_1)} Person incl. Tax`
-    console.log(numb2)
+    if (this.pieceOfProduct_1 == '0' || pieceOfProduct_1 == '') {
+      let price = document.getElementById('h33') as HTMLElement;
+      price.innerHTML = '';
+    }
   }
 
 
   flight3_e() {
     let price = document.getElementById('h33') as HTMLElement;
-
-    let a = document.getElementById('2');
+    let a = document.getElementById('2') as HTMLElement;
     let b: any = a?.innerHTML;
     let numb3: any = b.match(/\d/g);
-    numb3 = numb3.join("");
+    let numb = numb3.join("");
+    let pr = Number(this.pieceOfProduct_1) * numb;
+    price.innerHTML = `${pr.toString()} USD  for ${Number(this.pieceOfProduct_1)} Person incl. Tax`;
 
-    let pr = Number(this.pieceOfProduct_1) * numb3
-    price.innerHTML = `${pr.toString()} USD  for ${Number(this.pieceOfProduct_1)} Person incl. Tax`
+    let pieceOfProduct = document.getElementById('res') as HTMLInputElement |  null;
+    let pieceOfProduct_1 = pieceOfProduct?.value;
 
+    if (this.pieceOfProduct_1 == '0' || pieceOfProduct_1 == '') {
+      let price = document.getElementById('h33') as HTMLElement;
+      price.innerHTML = '';
+    };
+  };
 
-  }
+  datum: string = new Date().toString();
 
-  datum:string = new Date().toString();
-
-}
+};
 
 
