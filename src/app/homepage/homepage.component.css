@@ -246,6 +246,18 @@
      border-radius: 5px;
      margin-left: 15px;
  }
+ #tabla{
+    width: 200px;
+    height: 20px;
+    margin-left: 5px;
+    border-width: 1.5pt;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border-color: red;
+ }
+ fieldset{
+    margin-bottom: 10px;
+ }
 
  /*----------------------------- Price / Flight table -----------------*/
  table {

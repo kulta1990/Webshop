@@ -143,8 +143,8 @@ export class HomepageComponent {
     let numb2 = numb1.join("");
     let pr = Number(this.pieceOfProduct_1) * numb2;
     price.innerHTML = `${pr.toString()} USD  for ${Number(this.pieceOfProduct_1)} Person incl. Tax`;
-    
-    let pieceOfProduct = document.getElementById('res') as HTMLInputElement |  null;
+
+    let pieceOfProduct = document.getElementById('res') as HTMLInputElement | null;
     let pieceOfProduct_1 = pieceOfProduct?.value;
 
     if (this.pieceOfProduct_1 == '0' || pieceOfProduct_1 == '') {
@@ -162,8 +162,8 @@ export class HomepageComponent {
     let numb = numb2.join("");
     let pr = Number(this.pieceOfProduct_1) * numb;
     price.innerHTML = `${pr.toString()} USD  for ${Number(this.pieceOfProduct_1)} Person incl. Tax`;
-  
-    let pieceOfProduct = document.getElementById('res') as HTMLInputElement |  null;
+
+    let pieceOfProduct = document.getElementById('res') as HTMLInputElement | null;
     let pieceOfProduct_1 = pieceOfProduct?.value;
 
     if (this.pieceOfProduct_1 == '0' || pieceOfProduct_1 == '') {
@@ -176,14 +176,14 @@ export class HomepageComponent {
   flight3_e() {
     let price = document.getElementById('h33') as HTMLElement;
     let a = document.querySelector('.Price3') as HTMLElement;
-  
+
     let b: any = a?.innerHTML;
     let numb3: any = b.match(/\d/g);
     let numb = numb3.join("");
     let pr = Number(this.pieceOfProduct_1) * numb;
     price.innerHTML = `${pr.toString()} USD  for ${Number(this.pieceOfProduct_1)} Person incl. Tax`;
 
-    let pieceOfProduct = document.getElementById('res') as HTMLInputElement |  null;
+    let pieceOfProduct = document.getElementById('res') as HTMLInputElement | null;
     let pieceOfProduct_1 = pieceOfProduct?.value;
 
     if (this.pieceOfProduct_1 == '0' || pieceOfProduct_1 == '') {
@@ -191,9 +191,10 @@ export class HomepageComponent {
       price.innerHTML = '';
     };
   };
-
+  /*---------------------------- footer datum live------------- */
   datum: string = new Date().toString();
-
+  /*---------------- searching on price/flight etc. ------------- */
+  szuro!: string;
 };
 
 
