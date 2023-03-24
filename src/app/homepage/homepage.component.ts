@@ -137,7 +137,7 @@ export class HomepageComponent {
   //---------------------- onClick get td price give back for calc ---------------//
   flight1_e() {
     let price = document.getElementById('h33') as HTMLElement;
-    let a = document.querySelector('.spanPrice') as HTMLElement;
+    let a = document.querySelector('.Price1') as HTMLElement;
     let b: any = a?.innerHTML;
     let numb1: any = b.match(/\d/g);
     let numb2 = numb1.join("");
@@ -156,7 +156,7 @@ export class HomepageComponent {
 
   flight2_e() {
     let price = document.getElementById('h33') as HTMLElement;
-    let a = document.getElementById('1') as HTMLElement;
+    let a = document.querySelector('.Price2') as HTMLElement;
     let b: any = a?.innerHTML;
     let numb2: any = b.match(/\d/g);
     let numb = numb2.join("");
@@ -175,7 +175,8 @@ export class HomepageComponent {
 
   flight3_e() {
     let price = document.getElementById('h33') as HTMLElement;
-    let a = document.getElementById('2') as HTMLElement;
+    let a = document.querySelector('.Price3') as HTMLElement;
+  
     let b: any = a?.innerHTML;
     let numb3: any = b.match(/\d/g);
     let numb = numb3.join("");

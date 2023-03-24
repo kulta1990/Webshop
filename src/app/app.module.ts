@@ -6,6 +6,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 @NgModule({
   declarations: [
@@ -19,8 +21,8 @@ import { RegistrationComponent } from './registration/registration.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-  
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

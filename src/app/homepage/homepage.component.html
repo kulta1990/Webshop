@@ -20,19 +20,19 @@
                 <tr *ngFor="let x of Product">
                     <td class="td_1">Flight to {{x.country}}</td>
 
-
                     <td (click)="flight1_e()" class="tdRest">Price pro person with <span
-                            class="coFlight">{{x.flight[1]}}</span><span id="0"
-                            class="spanPrice">{{x.priceProFlight[1]}}</span></td>
+                        class="coFlight">{{x.flight[0]}}</span><span
+                        class="Price1 spanPrice">{{x.priceProFlight[0] | currency:'USD':true:'1.0-0'}}</span></td>
 
-                    <td (click)="flight1_e()" class="tdRest">Price pro person with <span
-                            class="coFlight">{{x.flight[2]}}</span><span id="0"
-                            class="spanPrice">{{x.priceProFlight[2]}}</span></td>
+                    <td (click)="flight2_e()" class="tdRest">Price pro person with <span
+                            class="coFlight">{{x.flight[1]}}</span><span 
+                            class="Price2 spanPrice">{{x.priceProFlight[1] | currency:'USD':true:'1.0-0'}}</span></td>
 
-                    <td (click)="flight1_e()" class="tdRest">Price pro person with <span
-                            class="coFlight">{{x.flight[0]}}</span><span id="0"
-                            class="spanPrice">{{x.priceProFlight[0]}}</span></td>
+                    <td (click)="flight3_e()" class="tdRest">Price pro person with <span
+                            class="coFlight">{{x.flight[2]}}</span><span
+                            class="Price3 spanPrice">{{x.priceProFlight[2] | currency:'USD':true:'1.0-0'}}</span></td>
 
+                
 
                 </tr>
             </tbody>
