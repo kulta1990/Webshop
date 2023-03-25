@@ -10,10 +10,7 @@ export class RegistrationComponent {
 
 
   /*------------------------ Email and Password Validation ----------- */
-  Regexp() {
-
-    const event = document.getElementById('btnReg');
-    event?.addEventListener('click', () => {
+  Regexp() {   
       const a: any = document.getElementById('email') as HTMLElement | null;
       const d: any = document.getElementById('password') as HTMLElement | null;
       const e: any = document.getElementById('password_again') as HTMLElement | null;
@@ -35,8 +32,12 @@ export class RegistrationComponent {
       } else if (password !== passwordAgain) {
         let textEmail = document.querySelector('#smallEmail') as HTMLElement;
         textEmail.innerHTML = 'The passwords do not match!';
+      }else{
+        let regComp = document.getElementById('regComplete') as HTMLElement;
+        let textEmail = document.querySelector('#smallEmail') as HTMLElement;
+        regComp.innerHTML = 'Registration Completed!';
+        textEmail.style.visibility = 'hidden';
       }
-    })
 
   }
 
@@ -46,27 +47,17 @@ export class RegistrationComponent {
   /*--------------------------- Password show on click toggle between type text and pass ---------------- */
   PassShow(): void {
     let pass = document.getElementById('password') as HTMLInputElement;
-    let passAgain = document.getElementById('password_again') as HTMLInputElement;
-    let img1 = document.getElementById('eye1');
-    let img2 = document.getElementById('eye2');
     let passs = pass?.getAttribute('type');
-    let passsAgain = passAgain?.getAttribute('type');
-    img1?.addEventListener('click', () => {
+  
       if (passs == 'text') {
         document.getElementById('password')?.setAttribute('type', 'password');
-      } else {
-        document.getElementById('password')?.setAttribute('type', 'text');
-      }
-    });
-    img2?.addEventListener('click', () => {
-      if (passsAgain == 'text') {
         document.getElementById('password_again')?.setAttribute('type', 'password');
       } else {
+        document.getElementById('password')?.setAttribute('type', 'text');
         document.getElementById('password_again')?.setAttribute('type', 'text');
       }
-    });
+  
   }
-
 
 
 }

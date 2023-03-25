@@ -19,11 +19,13 @@ export class AppComponent {
     
       if (nav != 'opened') {
         navi.style.animationName = 'opened';
+        
       } else {
         navi.style.animationName = 'closed';
-
+        
       }
    
   }
+
 };
 

@@ -145,52 +145,10 @@ h3 {
     font-size: 0.7rem;
 }
 
-/*---------------------- OK div pop-up, purchase succeed----------------------*/
-#OK {
-    width: 300px;
-    transform: translateY(-28rem);
-
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    background-color: rgb(89, 184, 89);
-    z-index: +4;
-    box-shadow: 3px 3px 5px green;
-    border-radius: 15px;
-    border-left: 10px solid black;
-    animation-name: ok;
-    animation-duration: 2s;
-
-
-}
-
-@keyframes ok {
-    from {
-        width: 500px;
-        transform: ease-in out;
-    }
-
-    to {
-        width: 0;
-        height: 0;
-    }
-}
-
-#OK>p {
-    font-size: 3rem;
-    color: rgb(241, 246, 241);
-    position: relative;
-    margin-top: 11rem;
-    display: block;
-    font-weight: 600;
-    text-shadow: 4px 3px rgb(205, 103, 103);
-}
-
-#imgOK {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 150px;
-    position: absolute;
+#regComplete {
+    color: rgb(7, 115, 7);
+    font-size: 1.5rem;
+    margin: 10px;
 }
 
 
