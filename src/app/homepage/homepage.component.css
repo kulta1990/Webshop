@@ -246,17 +246,19 @@
      border-radius: 5px;
      margin-left: 15px;
  }
- #tabla{
-    width: 200px;
-    height: 20px;
-    margin-left: 5px;
-    border-width: 1.5pt;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    border-color: red;
+
+ #tabla {
+     width: 200px;
+     height: 20px;
+     margin-left: 5px;
+     border-width: 1.5pt;
+     border-radius: 5px;
+     margin-bottom: 15px;
+     border-color: red;
  }
- fieldset{
-    margin-bottom: 10px;
+
+ fieldset {
+     margin-bottom: 10px;
  }
 
  /*----------------------------- Price / Flight table -----------------*/
@@ -427,7 +429,7 @@
          transform: rotateZ(0);
          max-width: 300px;
          margin-left: 20px;
-         
+
      }
  }
 
@@ -473,6 +475,113 @@
      }
  }
 
+
+
+ /*-----------------------  carousel -------------------------*/
+ body {
+     margin: 0;
+     text-align: center;
+     font-family: sans-serif;
+
+
+ }
+
+ .container {
+     position: relative;
+     width: 320px;
+     margin: 0px auto 0 auto;
+     perspective: 1000px;
+ }
+
+ .carousel {
+     margin: 100px auto 0 auto;
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     transform-style: preserve-3d;
+     animation: rotate360 60s infinite forwards linear;
+
+ }
+
+ .carousel__face {
+     position: absolute;
+     width: 300px;
+     height: 187px;
+     top: 20px;
+     left: 10px;
+     right: 10px;
+     background-size: cover;
+     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+     display: flex;
+
+ }
+
+ span {
+     margin: auto;
+     font-size: 2rem;
+     color: #eee8e8;
+ }
+
+
+ .carousel__face:nth-child(1) {
+     background-image: url('https://www.planet-wissen.de/kultur/asien/vietnam/vietnam-landschaft-100~_v-gseapremiumxl.jpg');
+     transform: rotateY(0deg) translateZ(430px);
+ }
+
+ .carousel__face:nth-child(2) {
+     background-image: url('https://www.visittheusa.com/sites/default/files/styles/hero_l/public/images/hero_media_image/2017-01/Getty_515070156_EDITORIALONLY_LosAngeles_HollywoodBlvd_Web72DPI_0.jpg?h=0a8b6f8b&itok=lst_2_5d');
+     transform: rotateY(40deg) translateZ(430px);
+ }
+
+ .carousel__face:nth-child(3) {
+     background-image: url('https://cdn.travelpulse.com/images/31aaedf4-a957-df11-b491-006073e71405/bb73aab8-f2bf-4278-88c3-33dd628df23f/630x355.jpg');
+     transform: rotateY(80deg) translateZ(430px);
+ }
+
+ .carousel__face:nth-child(4) {
+     background-image: url('https://www.gannett-cdn.com/media/2023/01/10/USATODAY/usatsports/The-Ritz-Carlton.jpg');
+     transform: rotateY(120deg) translateZ(430px);
+ }
+
+ .carousel__face:nth-child(5) {
+     background-image: url('https://i.natgeofe.com/k/e965ea18-80fa-4205-a1df-3ec327ddb567/hungary-budapest.jpg');
+     transform: rotateY(160deg) translateZ(430px);
+ }
+
+ .carousel__face:nth-child(6) {
+     background-image: url('https://cdn.bunniktours.com.au/public/gallery_images/Europe/Alpine%20Discovery/EU%20-%20Switzerland%20-%20Zurich%20by%20Mirza%20Ariadi-feature.jpg');
+     transform: rotateY(200deg) translateZ(430px);
+ }
+
+ .carousel__face:nth-child(7) {
+     background-image: url("https://fox5sandiego.com/wp-content/uploads/sites/15/2021/11/AdobeStock_300186995-e1637004125255.jpeg?strip=1");
+     transform: rotateY(240deg) translateZ(430px);
+ }
+
+ .carousel__face:nth-child(8) {
+     background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/a3/2a/f2/big-hand-ang-golden-bridge.jpg?w=600&h=400&s=1");
+     transform: rotateY(280deg) translateZ(430px);
+ }
+
+ .carousel__face:nth-child(9) {
+     background-image: url("https://europeanvalues.cz/wp-content/uploads/2021/12/Hungary_Budapest_POST.jpg");
+     transform: rotateY(320deg) translateZ(430px);
+ }
+
+
+
+ @keyframes rotate360 {
+     from {
+         transform: rotateY(0deg);
+     }
+
+     to {
+         transform: rotateY(-360deg);
+     }
+ }
+
+
+
  /*--------------------footer --------------------*/
 
  footer {
@@ -487,5 +596,15 @@
      font-family: Arial, Helvetica, sans-serif;
      font-weight: 700;
      letter-spacing: 2pt;
-     margin-top: 2rem;
+     margin-top: 38rem;
  }
+
+ @media screen and (max-width:900px) {
+    .container {
+   display: none;
+    }
+    footer {
+      
+       margin-top: 2rem;
+   }
+}
